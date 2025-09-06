@@ -666,7 +666,13 @@ function renderTable() {
                 <td>
                 ${(item.totalWeight * factor).toFixed(2)} ${weightUnit}
                 </td>
-                <td>${item.taric}</td>
+                <td>
+                  <input type="text"
+                         class="taric-input"
+                         value="${item.taric || ''}"
+                         placeholder="TARIC"
+                         onchange="updateItem('${item.id}', 'taric', this.value)">
+                </td>
                 <td><span class="delete-btn" onclick="deleteRow('${item.id}')">✕</span></td>
             `;
             tbody.prepend(itemRow);
@@ -727,6 +733,8 @@ function updateItem(id, field, value) {
                 item.nameEs = material?.nameEs || '';
                 item.netWeightUnit = material?.netWeight || 0;
                 item.taric = material?.taricNumber || '';
+            } else if (field === 'taric') {
+                item.taric = (value || '').trim();
             } else {
                 item[field] = Number(value) || 0;
             }
