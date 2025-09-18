@@ -648,9 +648,9 @@ function renderTable() {
                     <input type="text"
                         class="autocomplete-input"
                         list="materialesList-${item.id}"
-                        value="${idioma === 'ES' ? (materiales.find(m => m.description === item.description)?.nameEs || item.nameEs || '') : (item.description || '')}"
-                        onchange="autocompleteProducto(event, '${item.id}')"
-                        placeholder="Buscar producto..." />
+                        value="${idioma === 'ES' ? (materiales.find(m => m.description === item.description)?.nameEs || item.nameEs || '') : (item.nameEn || item.description || '')}"
+                        onblur="editarProducto(event, '${item.id}')"
+                        placeholder="Buscar o escribir producto..." />
 
                     <datalist id="materialesList-${item.id}">
                         ${materiales.map(m => `
@@ -777,6 +777,46 @@ function autocompleteProducto(event, itemId) {
             item.totalWeight = item.units * item.netWeightUnit;
             calculateTotals(pallet.id);
         }
+    });
+
+    renderTable();
+}
+
+function editarProducto(event, itemId) {
+    const inputText = (event.target.value || '').trim();
+    const lower = inputText.toLowerCase();
+
+    // Intentar casar con la lista de materiales tanto por ES como por EN
+    const match = materiales.find(m =>
+        (m.nameEs && m.nameEs.toLowerCase() === lower) ||
+        (m.description && m.description.toLowerCase() === lower)
+    );
+
+    data.forEach(pallet => {
+        const item = pallet.items.find(i => i.id === itemId);
+        if (!item) return;
+
+        if (match) {
+            // Coincidencia exacta con catálogo: rellenamos todo
+            item.description = match.description;
+            item.nameEs = match.nameEs;
+            item.nameEn = match.description;
+            item.netWeightUnit = match.netWeight;
+            item.taric = match.taricNumber;
+        } else {
+            // Texto libre: dejamos editable el nombre SIN borrar peso ni TARIC existentes
+            item.description = inputText;
+            item.nameEs = inputText;
+            item.nameEn = inputText;
+            // Si no hay peso previo, lo dejamos en 0. Si ya había, lo conservamos.
+            item.netWeightUnit = Number(item.netWeightUnit) || 0;
+            // Si no había TARIC previo, lo dejamos vacío; si ya había, lo conservamos.
+            item.taric = (item.taric || '').trim();
+        }
+
+        // Recalcular totales del ítem/palet
+        item.totalWeight = (Number(item.units) || 0) * (Number(item.netWeightUnit) || 0);
+        calculateTotals(pallet.id);
     });
 
     renderTable();
