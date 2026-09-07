@@ -793,12 +793,13 @@ function addPalletPatines() {
 }
 
 function addPalletFoam() {
-    const material = materiales.find(m => m.description === "Foam Floor");
-
-    if (!material) {
-        alert("Material 'Foam Floor' no encontrado en la lista.");
-        return;
-    }
+    const material = materiales.find(m => m.reference === 'A00088') || {
+        reference: 'A00088',
+        description: 'Suelo de espuma',
+        nameEs: 'Suelo de espuma',
+        netWeight: 14,
+        taricNumber: '3921.19.00.00'
+    };
 
     const newItem = {
         id: `item-${Date.now()}-1`,
