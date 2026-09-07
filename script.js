@@ -317,21 +317,32 @@ const warehouseReferenceMap = {
 
 function warehouseMaterial(record) {
     const mapped = warehouseReferenceMap[record.reference] || {};
-    const material = materiales.find(item => item.description === mapped.description);
+    const material = materiales.find(item => item.reference === record.reference) ||
+        materiales.find(item => item.description === mapped.description);
+    const barrierType = mapped.barrierType || inferWarehouseBarrierType(record.product);
     const fallbackReference = record.reference === 'A00477' ? 'A00043' :
-        (mapped.barrierType ? 'A00042' : '');
+        (barrierType ? 'A00042' : '');
     const fallbackMaterial = fallbackReference
         ? materiales.find(item => item.reference === fallbackReference)
         : null;
     return {
         ...record,
         ...mapped,
+        barrierType,
         description: material?.description || mapped.description || record.product,
         nameEs: mapped.displayName || (mapped.skateSize ? `Patines C talla ${mapped.skateSize}` : (material?.nameEs || record.product)),
         nameEn: material?.nameEn || material?.description || record.product,
         netWeightUnit: material?.netWeight || fallbackMaterial?.netWeight || 0,
         taric: material?.taricNumber || ''
     };
+}
+
+function inferWarehouseBarrierType(productName = '') {
+    const name = productName.toLocaleLowerCase();
+    if (!/^vallas?\b/.test(name) || /\b(?:pie|panel|par|vinilo)\b/.test(name)) return '';
+    if (/curv/.test(name)) return 'curve';
+    if (/especial/.test(name)) return 'special';
+    return 'straight';
 }
 
 function warehouseItem(material, units) {
