@@ -832,12 +832,13 @@ function addPalletFoam() {
 
 
 function addPalletPatineros() {
-    const material = materiales.find(m => m.description === "Skates shelves");
-
-    if (!material) {
-        alert("Material 'Skates shelves' no encontrado en la lista.");
-        return;
-    }
+    const material = materiales.find(m => m.reference === 'A00078') || {
+        reference: 'A00078',
+        description: 'Patineros',
+        nameEs: 'Patineros',
+        netWeight: 40,
+        taricNumber: '9403.20.00.86'
+    };
 
     const newItem = {
         id: `item-${Date.now()}-2`,
