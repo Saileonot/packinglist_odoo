@@ -6,10 +6,13 @@
     const contraseñaCorrecta = "1968"; // Puedes cambiar la contraseña aquí
     let intentos = 3; // Número de intentos permitidos
 
+    if (sessionStorage.getItem('xtraiceAccessGranted') === 'true') return;
+
     while (intentos > 0) {
         let contraseñaIngresada = prompt("Uso exclusivo XTRAICE - 🔒 Introduce la contraseña:");
 
         if (contraseñaIngresada === contraseñaCorrecta) {
+            sessionStorage.setItem('xtraiceAccessGranted', 'true');
             alert("PACKING LIST XTRAICE \n\n ✅ Acceso concedido.\n BIENVENIDO. \n\n Si ves algún error en la ejecución de la aplicación o sus resultados, puedes comunicármelo vía mail: tono@xtraice.com");
             return; // Permite que la aplicación continúe
         } else {
@@ -39,6 +42,7 @@ function cambiarUnidad(nuevaUnidad) {
 }
 
 
+/* Catálogo histórico conservado como referencia; el catálogo activo se carga desde Productos_Odoo.txt.
 const materiales = [
         { description: "Cleaning Machine 220v", nameEs: "Máquina de limpieza 220v", netWeight: 50.0, taricNumber: "8424.30.90.00" },
         { description: "Double runner shoe skate", nameEs: "Patín doble cuchilla", netWeight: 0.5, taricNumber: "9506.70.10.00" },
@@ -145,11 +149,430 @@ const materiales = [
         { description: "XLR Connect", nameEs: "Conector XLR", netWeight: 0.2, taricNumber: "85.44.49" },
         { description: "Xtraice Cleaning solution", nameEs: "Líquido limpiador Xtraice", netWeight: 10.0, taricNumber: "3402.90.10" },
         { description: "Xtraice Daily Clenaning liquid", nameEs: "Líquido de limpieza diaria Xtraice", netWeight: 5.0, taricNumber: "3402.90.10" }  
-];
+]; */
+
+let materiales = [];
+
+const productAliases = {
+    A00485: { description: 'Skates C', nameEs: 'Patin C' },
+    A00005: { description: 'Pro panels', nameEs: 'Paneles Pro' },
+    A00006: { description: 'Plugs PRO (500 units)', nameEs: '500 Tapones PRO' },
+    A00078: { description: 'Skates shelves', nameEs: 'Patineros' },
+    A00080: { description: 'Vacuum', nameEs: 'Aspiradora' },
+    A00082: { description: 'Rubber floor roll', nameEs: 'Suelo de caucho rollo' },
+    A00088: { description: 'Foam Floor', nameEs: 'Suelo de espuma' },
+    A00089: { description: 'Installation kit', nameEs: 'Kit de Instalación' },
+    A00090: { description: 'Cleaning Machine 220v', nameEs: 'Máquina de limpieza 220v' },
+    A00364: { description: 'Double Xtraice Sharpener Machine', nameEs: 'Afiladora doble Xtraice 220V' },
+    A00447: { description: 'Mopa', nameEs: 'Mopa' },
+    A00448: { description: 'Squeegee', nameEs: 'Racleta agua (Haragán)' },
+    A00461: { description: 'Bars for plug disassembly', nameEs: 'Barras para desmontaje tapones' },
+    A00482: { description: 'disassembly pack', nameEs: 'Pack desmontaje para 100m2' },
+    A00508: { description: 'Kit No Fix 4700 mm', nameEs: 'Kit no fijación (metro lineal)' }
+};
+
+function parseProductCsvLine(line) {
+    const fields = [];
+    let field = '';
+    let quoted = false;
+    for (let index = 0; index < line.length; index++) {
+        const character = line[index];
+        if (character === '"') {
+            if (quoted && line[index + 1] === '"') {
+                field += '"';
+                index++;
+            } else {
+                quoted = !quoted;
+            }
+        } else if (character === ',' && !quoted) {
+                fields.push(field.trim());
+        } else {
+            field += character;
+        }
+    }
+    fields.push(field.trim());
+    return fields;
+}
+
+function parseProductCatalog(csvText) {
+    const lines = csvText.split(/\r?\n/).filter(line => line.trim());
+    const headers = parseProductCsvLine(lines[0]);
+    const referenceIndex = headers.indexOf('Referencia interna');
+    const nameIndex = headers.indexOf('Nombre');
+    const typeIndex = headers.indexOf('Tipo');
+    const weightIndex = headers.indexOf('Peso Kg');
+    const taricIndex = headers.indexOf('TARIC (HS)');
+    const englishNameIndex = headers.indexOf('Nombre EN-US');
+
+    return lines.slice(1).map(line => {
+        const row = parseProductCsvLine(line);
+        const name = row[nameIndex] || '';
+        const reference = row[referenceIndex] || '';
+        const type = row[typeIndex] || '';
+        const weight = row[weightIndex] || '';
+        const alias = productAliases[reference] || {};
+        const warehouseAlias = warehouseReferenceMap[reference] || {};
+        const normalizedWeight = (weight || '').includes(',')
+            ? (weight || '').replace(/\./g, '').replace(',', '.')
+            : (weight || '');
+        const parsedWeight = Number(normalizedWeight) || 0;
+        return {
+            description: alias.description || warehouseAlias.description || name,
+            nameEs: alias.nameEs || warehouseAlias.displayName || name,
+            nameEn: alias.description || warehouseAlias.description || name,
+            reference,
+            productType: type,
+            netWeight: parsedWeight,
+            taricNumber: row[taricIndex] || '',
+            nameEnFromFile: row[englishNameIndex] || ''
+        };
+    }).filter(material => material.description && material.productType !== 'service')
+        .map(material => ({
+            ...material,
+            nameEn: material.nameEnFromFile || material.nameEn
+        }));
+}
+
+async function loadProductCatalog() {
+    const response = await fetch('Productos_Odoo.txt');
+    if (!response.ok) throw new Error(`No se pudo cargar Productos_Odoo.txt (${response.status})`);
+    materiales = parseProductCatalog(await response.text());
+}
 
 
 let data = [];
 let lastUsedPalletNumber = 0; // Control de numeración de pallets
+const workingDataStorageKey = 'xtraiceWorkingPackingList';
+
+function persistWorkingData() {
+    sessionStorage.setItem(workingDataStorageKey, JSON.stringify({
+        pallets: data,
+        lastUsedPalletNumber
+    }));
+}
+
+function restoreWorkingData() {
+    const savedWorkingData = sessionStorage.getItem(workingDataStorageKey);
+    if (!savedWorkingData) return;
+
+    try {
+        const parsedData = JSON.parse(savedWorkingData);
+        if (Array.isArray(parsedData.pallets)) {
+            data = parsedData.pallets;
+            lastUsedPalletNumber = parsedData.lastUsedPalletNumber || 0;
+        }
+    } catch (error) {
+        sessionStorage.removeItem(workingDataStorageKey);
+    }
+}
+
+const warehouseReferenceMap = {
+    A00005: { description: "Pro panels" },
+    A00006: { description: "Plugs PRO (500 units)" },
+    A00042: { description: "Straight Silver Alum. Barriers", barrierType: "straight" },
+    A00043: { description: "Special Silver Alum. Barriers", barrierType: "special" },
+    A00044: { description: "Curved Silver Alum. Barriers", barrierType: "curve" },
+    A00449: { description: "Curved Silver Alum. Barriers", barrierType: "curve" },
+    A00045: { description: "Silver Alum. Gate Barriers", barrierType: "straight" },
+    A00477: { description: "Special Silver Alum. Gate Barriers", barrierType: "special" },
+    A00137: { description: "New Barriers Accesory", displayName: "Pie de valla alu" },
+    A00284: { description: "New Barriers Accesory", displayName: "Pie de valla alu" },
+    A00078: { description: "Skates shelves" },
+    A00364: { description: "Double Xtraice Sharpener Machine" },
+    A00080: { description: "Vacuum" },
+    A00082: { description: "Rubber floor roll" },
+    A00086: { description: "Antibacterial spray" },
+    A00088: { description: "Foam Floor" },
+    A00089: { description: "Installation kit" },
+    A00090: { description: "Cleaning Machine 220v" },
+    A00447: { description: "Mopa" },
+    A00448: { description: "Squeegee" },
+    A00482: { description: "disassembly pack" },
+    A00461: { description: "Bars for plug disassembly" },
+    A00508: { description: "Kit No Fix 4700 mm" },
+    A00153: { description: "Skates C", skateSize: 25 },
+    A00154: { description: "Skates C", skateSize: 26 },
+    A00155: { description: "Skates C", skateSize: 27 },
+    A00156: { description: "Skates C", skateSize: 28 },
+    A00157: { description: "Skates C", skateSize: 29 },
+    A00158: { description: "Skates C", skateSize: 30 },
+    A00159: { description: "Skates C", skateSize: 31 },
+    A00160: { description: "Skates C", skateSize: 32 },
+    A00161: { description: "Skates C", skateSize: 33 },
+    A00162: { description: "Skates C", skateSize: 34 },
+    A00163: { description: "Skates C", skateSize: 35 },
+    A00164: { description: "Skates C", skateSize: 36 },
+    A00165: { description: "Skates C", skateSize: 37 },
+    A00166: { description: "Skates C", skateSize: 38 },
+    A00167: { description: "Skates C", skateSize: 39 },
+    A00168: { description: "Skates C", skateSize: 40 },
+    A00169: { description: "Skates C", skateSize: 41 },
+    A00170: { description: "Skates C", skateSize: 42 },
+    A00171: { description: "Skates C", skateSize: 43 },
+    A00172: { description: "Skates C", skateSize: 44 },
+    A00173: { description: "Skates C", skateSize: 45 },
+    A00174: { description: "Skates C", skateSize: 46 },
+    A00175: { description: "Skates C", skateSize: 47 }
+};
+
+function warehouseMaterial(record) {
+    const mapped = warehouseReferenceMap[record.reference] || {};
+    const material = materiales.find(item => item.description === mapped.description);
+    return {
+        ...record,
+        ...mapped,
+        description: material?.description || mapped.description || record.product,
+        nameEs: mapped.displayName || (mapped.skateSize ? `Patines C talla ${mapped.skateSize}` : (material?.nameEs || record.product)),
+        nameEn: material?.nameEn || material?.description || record.product,
+        netWeightUnit: material?.netWeight || 0,
+        taric: material?.taricNumber || ''
+    };
+}
+
+function warehouseItem(material, units) {
+    return {
+        id: `item-${Date.now()}-${Math.random().toString(36).slice(2, 9)}`,
+        description: material.description,
+        nameEs: material.nameEs,
+        nameEn: material.nameEn,
+        units,
+        netWeightUnit: material.netWeightUnit,
+        totalWeight: Number((material.netWeightUnit * units).toFixed(2)),
+        taric: material.taric
+    };
+}
+
+function warehousePallet(items, dimensions, stackable = 'NOT', grossWeight = 15) {
+    const pallet = {
+        id: `pallet-${Date.now()}-${Math.random().toString(36).slice(2, 9)}`,
+        palletNum: 0,
+        grossWeight,
+        netWeight: items.reduce((sum, item) => sum + item.totalWeight, 0),
+        dimX: dimensions[0],
+        dimY: dimensions[1],
+        dimZ: dimensions[2],
+        bulk: 0,
+        stackable,
+        unitsPallet: 1,
+        items
+    };
+    pallet.bulk = Number((pallet.dimX * pallet.dimY * pallet.dimZ).toFixed(2));
+    return pallet;
+}
+
+function splitWarehouseQuantity(total, regularLimit, remainderLimit = regularLimit) {
+    const quantities = [];
+    let remaining = total;
+    while (remaining > remainderLimit) {
+        quantities.push(regularLimit);
+        remaining -= regularLimit;
+    }
+    if (remaining > 0) quantities.push(remaining);
+    return quantities;
+}
+
+function addWarehouseQuantityPallets(pallets, records, limit, dimensions, options = {}) {
+    records.forEach(record => {
+        splitWarehouseQuantity(record.quantity, limit, options.remainderLimit || limit).forEach(units => {
+            pallets.push(warehousePallet([warehouseItem(record, units)], dimensions, options.stackable || 'NOT', options.grossWeight || 15));
+        });
+    });
+}
+
+function addWarehouseBarrierPallets(pallets, records) {
+    const nonCurves = records.filter(record => record.barrierType !== 'curve');
+    const curves = records.filter(record => record.barrierType === 'curve');
+    let nonCurveUnits = nonCurves.reduce((sum, record) => sum + record.quantity, 0);
+    let curveUnits = curves.reduce((sum, record) => sum + record.quantity, 0);
+    let nonCurveIndex = 0;
+    let curveIndex = 0;
+    let nonCurveRemaining = nonCurves[0]?.quantity || 0;
+    let curveRemaining = curves[0]?.quantity || 0;
+
+    while (nonCurveUnits > 0) {
+        const items = [];
+        let space = Math.min(20, nonCurveUnits);
+        while (space > 0 && nonCurveIndex < nonCurves.length) {
+            const record = nonCurves[nonCurveIndex];
+            const units = Math.min(space, nonCurveRemaining);
+            items.push(warehouseItem(record, units));
+            space -= units;
+            nonCurveUnits -= units;
+            nonCurveRemaining -= units;
+            if (nonCurveRemaining === 0) {
+                nonCurveIndex++;
+                nonCurveRemaining = nonCurves[nonCurveIndex]?.quantity || 0;
+            }
+        }
+
+        let curveSpace = Math.min(4, curveUnits);
+        while (curveSpace > 0 && curveIndex < curves.length) {
+            const record = curves[curveIndex];
+            const units = Math.min(curveSpace, curveRemaining);
+            items.push(warehouseItem(record, units));
+            curveSpace -= units;
+            curveUnits -= units;
+            curveRemaining -= units;
+            if (curveRemaining === 0) {
+                curveIndex++;
+                curveRemaining = curves[curveIndex]?.quantity || 0;
+            }
+        }
+        pallets.push(warehousePallet(items, [2, 1.2, 1.7]));
+    }
+
+    while (curveUnits > 0) {
+        const units = Math.min(4, curveUnits);
+        const record = curves[curveIndex];
+        pallets.push(warehousePallet([warehouseItem(record, units)], [2, 1.2, 1.2]));
+        curveUnits -= units;
+        curveRemaining -= units;
+        if (curveRemaining <= 0) {
+            curveIndex++;
+            curveRemaining = curves[curveIndex]?.quantity || 0;
+        }
+    }
+}
+
+const warehouseServiceReferences = new Set([
+    'A00258', 'A00117', 'A00111', 'A00112', 'A00113', 'A00114', 'A00600'
+]);
+
+function isWarehouseService(record) {
+    return warehouseServiceReferences.has(record.reference) ||
+        /\b(?:montaje|desmontaje|alquiler|transporte|supervisi[oó]n|carga|descarga)\b/i.test(record.product);
+}
+
+function isWarehouseToboggan(record) {
+    return /tobog[aá]n/i.test(record.product) || /tobog[aá]n/i.test(record.nameEs || '');
+}
+
+function createWarehousePallets(records) {
+    records = records.filter(record => !isWarehouseService(record) && !isWarehouseToboggan(record));
+    const pallets = [];
+    const panels = records.filter(record => record.description === 'Pro panels');
+    const barriers = records.filter(record => record.barrierType);
+    const skates = records.filter(record => record.skateSize);
+    const rubber = records.filter(record => record.reference === 'A00082');
+    const patineros = records.filter(record => record.reference === 'A00078');
+    const foam = records.filter(record => record.reference === 'A00088');
+    const feet = records.filter(record => record.reference === 'A00137' || record.reference === 'A00284');
+    const accessories = records.filter(record => !panels.includes(record) && !barriers.includes(record) &&
+        !skates.includes(record) && !rubber.includes(record) && !patineros.includes(record) &&
+        !foam.includes(record) && !feet.includes(record));
+
+    addWarehouseQuantityPallets(pallets, panels, 25, [2, 1, 0.65], { remainderLimit: 30, stackable: 'YES' });
+    addWarehouseBarrierPallets(pallets, barriers);
+                field += character;
+    addWarehouseQuantityPallets(pallets, patineros, 10, [1.6, 0.85, 0.84]);
+    if (feet.length) {
+        const feetMaterial = { ...feet[0], quantity: feet.reduce((sum, record) => sum + record.quantity, 0) };
+        addWarehouseQuantityPallets(pallets, [feetMaterial], 100, [1.2, 1.1, 0.8]);
+    }
+    if (foam.length) {
+        const foamMaterial = { ...foam[0], quantity: foam.reduce((sum, record) => sum + record.quantity, 0) };
+        pallets.push(warehousePallet([warehouseItem(foamMaterial, foamMaterial.quantity)], [1.22, 0.8, 0.8]));
+    }
+
+    const totalSkates = skates.reduce((sum, record) => sum + record.quantity, 0);
+    const skateBatches = [];
+    let remainingSkates = totalSkates;
+    if (remainingSkates > 0 && remainingSkates <= 80) {
+        skateBatches.push(remainingSkates);
+    } else if (remainingSkates > 80) {
+        while (remainingSkates >= 60) {
+            skateBatches.push(60);
+            remainingSkates -= 60;
+        }
+        if (remainingSkates > 0 && remainingSkates < 20) {
+            skateBatches[skateBatches.length - 1] += remainingSkates;
+        } else if (remainingSkates > 0) {
+            skateBatches.push(remainingSkates);
+        }
+    }
+    skateBatches.forEach(batchSize => {
+        const skateProduct = {
+                ...(materiales.find(material => material.reference === 'A00485') || skates[0]),
+            description: 'Skates C',
+            nameEs: 'Patin C',
+            nameEn: 'Skates C'
+        };
+        const items = [warehouseItem(skateProduct, batchSize)];
+        pallets.push(warehousePallet(items, [1, 1, 1.4]));
+    });
+
+    if (accessories.length) {
+        pallets.push(warehousePallet(accessories.map(record => warehouseItem(record, record.quantity)), [1, 1, 1.5]));
+    }
+    return pallets;
+}
+
+async function extractWarehouseOrder(file) {
+    if (!window.pdfjsLib) throw new Error('No se pudo cargar el lector PDF. Comprueba la conexión a Internet.');
+    const pdf = await pdfjsLib.getDocument({ data: await file.arrayBuffer() }).promise;
+    const records = [];
+    const documentLines = [];
+    for (let pageNumber = 1; pageNumber <= pdf.numPages; pageNumber++) {
+        const page = await pdf.getPage(pageNumber);
+        const content = await page.getTextContent();
+        const lines = {};
+        content.items.forEach(item => {
+            const y = Math.round(item.transform[5]);
+            lines[y] = `${lines[y] || ''} ${item.str}`.trim();
+        });
+        const orderedLines = Object.keys(lines).sort((a, b) => b - a).map(y => lines[y]);
+        documentLines.push(...orderedLines);
+        let pending = '';
+        orderedLines.forEach(line => {
+            if (/^\d+\s+A\d{5}\b/.test(line)) pending = line;
+            else if (pending) pending += ` ${line}`;
+            if (pending && /\b(?:Usado|Nuevo)\s*$/.test(pending)) {
+                const match = pending.match(/^(\d+)\s+(A\d{5})\s+(.+?)\s+(?:Usado|Nuevo)\s*$/);
+                if (match) records.push({ quantity: Number(match[1]), reference: match[2], product: match[3].trim() });
+                pending = '';
+            }
+        });
+    }
+    const documentText = documentLines.join('\n');
+    const clientMatch = documentText.match(/Cliente:\s*(.+?)(?=\s+Pedido\s*\/\s*Presupuesto\s*:|\n|$)/i);
+    const orderDateMatch = documentText.match(/Fecha del pedido:\s*(\d{2}\/\d{2}\/\d{4})/i);
+
+    return {
+        records: records.filter(record => record.quantity > 0).map(warehouseMaterial),
+        client: clientMatch?.[1]?.trim() || '',
+        orderDate: orderDateMatch?.[1] || ''
+    };
+}
+
+async function importWarehouseOrder(event) {
+    const file = event.target.files[0];
+    event.target.value = '';
+    if (!file) return;
+    try {
+        const order = await extractWarehouseOrder(file);
+        const records = order.records;
+        if (!records.length) throw new Error('No se encontraron líneas de materiales');
+        if (data.length && !confirm('Se reemplazarán los palets actuales por los del pedido. ¿Continuar?')) return;
+        data = createWarehousePallets(records);
+        data.forEach((pallet, index) => pallet.palletNum = index + 1);
+        lastUsedPalletNumber = data.length;
+        const orderNumber = file.name.match(/S\d+/i)?.[0] || '';
+        if (orderNumber) document.getElementById('invoiceNumber').value = orderNumber;
+        if (order.client) document.getElementById('consigneeAddress').value = order.client;
+        if (order.orderDate) {
+            const [day, month, year] = order.orderDate.split('/');
+            document.getElementById('invoiceDate').value = `${year}-${month}-${day}`;
+        }
+        renderTable();
+        alert(`Pedido cargado: ${records.length} líneas y ${data.length} palets generados.`);
+        if (records.some(isWarehouseToboggan)) {
+            alert('el producto TOBOGAN no se paletiza de forma automática, ten en cuenta que ocupa entre el 60/70% de un camion trailer');
+        }
+    } catch (error) {
+        console.error(error);
+        alert(`No se pudo leer el pedido PDF: ${error.message}`);
+    }
+}
 
 // ======================
 // FUNCIONES PRINCIPALES
@@ -447,8 +870,8 @@ function addPalletPatineros() {
 function addPalletAccesorios() {
     const newPalletNumber = getNextPalletNumber();
 
-    const sharpener = materiales.find(m => m.description === "Sharpener machine");
-    const vacuum = materiales.find(m => m.description === "Vacuum");
+    const sharpener = materiales.find(m => m.reference === "A00364" || m.description === "Sharpener machine");
+    const vacuum = materiales.find(m => m.reference === "A00080" || m.description === "Vacuum");
 
     if (!sharpener || !vacuum) {
         alert("Alguno de los materiales no se encuentra en la lista.");
@@ -579,7 +1002,14 @@ function addPalletAlumBarriers() {
 // RENDERIZADO
 // ======================
 
+function restoreTableScroll(scrollY) {
+    window.scrollTo(0, scrollY);
+    requestAnimationFrame(() => window.scrollTo(0, scrollY));
+}
+
 function renderTable() {
+    const scrollY = window.scrollY;
+    persistWorkingData();
     const factor = unidadPeso === 'LB' ? 2.20462 : 1;
     const weightUnit = unidadPeso === 'LB' ? 'lb' : 'kg';
     const volumeFactor = unidadPeso === 'LB' ? 35.3147 : 1;
@@ -591,6 +1021,7 @@ function renderTable() {
     const emptyMessage = document.getElementById('emptyMessage');
     if (data.length === 0) {
         emptyMessage.style.display = "block";
+        restoreTableScroll(scrollY);
         return;
     } else {
         emptyMessage.style.display = "none";
@@ -689,6 +1120,8 @@ function renderTable() {
         `;
         tbody.prepend(addButtonRow);
     });
+
+    restoreTableScroll(scrollY);
 }
 
 // ======================
@@ -880,7 +1313,20 @@ function loadData() {
 // GENERACIÓN PDF
 // ======================
 
+function renumberPallets() {
+    [...data]
+        .sort((firstPallet, secondPallet) => (Number(firstPallet.palletNum) || 0) - (Number(secondPallet.palletNum) || 0))
+        .forEach((pallet, index) => {
+            pallet.palletNum = index + 1;
+        });
+
+    lastUsedPalletNumber = data.length;
+}
+
 function generatePDF() {
+    renumberPallets();
+    renderTable();
+
     const consigneeTextarea = document.getElementById("consigneeAddress");
     let consigneeLines = consigneeTextarea.value.split('\n').slice(0, 5);
     while (consigneeLines.length < 5) consigneeLines.push('');
@@ -900,7 +1346,6 @@ function generatePDF() {
 
     // Cargar imagen y continuar en onload
     const img = new Image();
-    img.src = './logoxtraice.jpg';
     img.onload = function () {
         // Título "PACKING LIST" centrado y sombreado
         doc.setFillColor(41, 128, 185);
@@ -942,7 +1387,11 @@ function generatePDF() {
         doc.setFont(undefined, 'bold');
         doc.setFontSize(8);
         // Logo a la izquierda
-        doc.addImage(img, 'JPEG', 14, 43, 22, 8.5); // x, y, width, height
+        try {
+            doc.addImage(img, 'JPEG', 14, 43, 22, 8.5); // x, y, width, height
+        } catch (error) {
+            console.warn('No se pudo insertar el logo en el PDF:', error);
+        }
 
         // FACTURA (en línea con el logo)
         doc.setFont(undefined, 'bold');
@@ -956,6 +1405,10 @@ function generatePDF() {
         // Ahora sí: el contenido del PDF
         continuarPDF(doc, factor, weightUnit, volumeFactor, volumeUnit, dimensionFactor, trimmedConsigneeLines);
     };
+    img.onerror = function () {
+        continuarPDF(doc, factor, weightUnit, volumeFactor, volumeUnit, dimensionFactor, trimmedConsigneeLines);
+    };
+    img.src = './logoxtraice.jpg';
 }
 
 function continuarPDF(doc, factor, weightUnit, volumeFactor, volumeUnit, dimensionFactor, consigneeLines) {
@@ -1102,7 +1555,16 @@ function continuarPDF(doc, factor, weightUnit, volumeFactor, volumeUnit, dimensi
 
 // Inicialización
 window.renderTable = renderTable;
-window.onload = renderTable;
+window.onload = async function () {
+    try {
+        await loadProductCatalog();
+        restoreWorkingData();
+        renderTable();
+    } catch (error) {
+        console.error(error);
+        alert(`No se pudo cargar el catálogo de productos: ${error.message}`);
+    }
+};
 
 // Limitar la dirección del consignatario a exactamente 5 líneas
 
@@ -1246,6 +1708,7 @@ function resetScreen() {
     if (confirm("¿Estás seguro de que deseas borrar todos los datos y empezar desde cero?")) {
         data = [];
         lastUsedPalletNumber = 0;
+        sessionStorage.removeItem(workingDataStorageKey);
         document.getElementById("consigneeAddress").value = "";
         document.getElementById("invoiceNumber").value = "";
         document.getElementById("invoiceDate").value = "";

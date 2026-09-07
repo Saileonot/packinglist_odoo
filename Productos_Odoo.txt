@@ -1,0 +1,518 @@
+Nombre,Referencia interna,Precio de venta,Tipo,Peso Kg,Tipo pallet,Medida pallet,TARIC (HS),Nombre EN-US
+Valla alu puerta antigua,A00037,1,consu,17.6,,,,Barrier alu old gate
+500 Tapones Lite,A00122,200,consu,1.0,Accesorios,1.20x0.80,,500 LITE Plastic Plugs
+500 Tapones PRO,A00006,200,consu,1.9,Accesorios,1.20x0.80,3923.50.90.00,500 Plastic PRO Plugs
+500 Tapones PRO 4T18,A00220,1,consu,0.0,Accesorios,1.20x0.80,,500 Tapones PRO 4T18
+500 Tapones PRO 4T20,A00222,1,consu,0.0,Accesorios,1.20x0.80,,500 Tapones PRO 4T20
+500 Tapones PRO RM18,A00219,1,consu,0.0,Accesorios,1.20x0.80,,500 Tapones PRO RM18
+"50m Tela negra 1,20 cm",A00440,0,consu,0.0,,,,50m Black cloth 120cm
+50m Tela negra 60 cm,A00438,0,consu,0.0,,,,50m Black cloth 60cm
+50m Tela negra 90 cm,A00439,0,consu,0.0,,,,50m Black cloth 90cm
+ADUANAS,A00119,0,service,0.0,,,,Customs
+AFILADORA SPARX,A00493,1,consu,0.0,,,,AFILADORA SPARX
+Accesorios plásticos para pistas de patinaje,A00496,1,consu,0.0,,,,Plastic accessories skating rink
+Afiladora Xtraice,A00079,"2.990,00",consu,38.0,Accesorios,1.20x0.80,8460.31.00.00,Xtraice Sharpener Machine
+Afiladora Xtraice 1001,A00127,1,consu,32.0,Accesorios,1.20x0.80,,Afiladora Xtraice 1001
+Afiladora Xtraice ONE,A00128,1,consu,32.0,Accesorios,1.20x0.80,,Afiladora Xtraice ONE
+Afiladora doble Xtraice 110V,A00475,"4.995,00",consu,38.0,Accesorios,1.20x0.80,,Double Skate Sharpener 110V
+Afiladora doble Xtraice 220V,A00364,"5.000,00",consu,38.0,Accesorios,1.20x0.80,8460.31.00.00,Double Skate Sharpener 220V
+Alargadores,A00250,1,consu,0.0,,,,Extension cord
+Alquiler Caseta,A00279,1,service,0.0,,,,Alquiler Caseta
+Alquiler Diana de Curling + 8 piedras Pro,,"1.750,00",service,,,,,
+Alquiler Pista de Hielo,A00258,0,service,0.0,,,,Ice rink rental
+Alquiler de Mini-Tobogán (2 carriles),,1,service,,,,,
+Alquiler de Tobogán,,1,service,,,,,
+Alquiler de Tobogán,A00400,1,service,0.0,,,,Rental slope
+Alquiler diana de curling + 8 piedras,A00503,1,service,,,,,
+Altavoces,A00245,275,consu,8.0,,,85.18.21.00,Speakers
+Amplificador,A00243,420,consu,9.0,,,85.18.40,Amplifier
+Andadores,A00234,30,consu,2.0,Accesorios,1.20x0.80,,Skating aids
+App Xtraice Licencia,A00345,1,service,0.0,,,,App Xtraice licencia
+App Xtraice licencia,,0,consu,,,,,
+Arbol de navidad,A00469,"6.500,00",consu,0.0,,,,Christmas tree
+Arbol de navidad 1950x900,A00052,1,consu,12.0,,,,Xmas tree 1950 x 900 cm
+Ardilla,A00362,1,consu,4.0,,,,Chipmunk
+Asesoramiento digital,A00494,1,service,0.0,,,,Asesoramiento digital
+Aspiradora,A00080,100,consu,11.0,Accesorios,1.20x0.80,8508.11.00,Vacuum
+Aspiradora 110-120v 60Hz,A00476,100,consu,0.0,,,8508.11.00,Vacuum 110v-120v 60hz
+Bordes curling de hielo sintético (metro lineal),A00601,140,service,0.0,,,,Curling boards (linear meter)
+Bordes de madera para curling (Metro Lineal),A00505,50,service,0.0,,,,Curling wooden frames (lineal meter)
+Bancos,A00081,215,consu,13.4,Accesorios,1.20x0.80,9401.69.00.00,Bench
+Barras para desmontaje tapones,A00461,0,consu,2.0,,,,̈
+Base silla de ruedas (PMR Wheelchair),A00507,1,consu,0.0,,,,Base silla de ruedas (PMR Wheelchair)
+Bobinas de fleje,,1,consu,,,,,
+Bobinas de fleje,A00283,1,consu,0.0,,,,Bobinas de fleje
+Borrador Paneles,,1,consu,,,,,
+Cable electrico 10,A00326,0,consu,0.5,Accesorios,1.20x0.80,,Electric Cable 10
+Cable electrico 15,A00328,0,consu,0.75,Accesorios,1.20x0.80,,Electric Cable 15
+Cable electrico 20,A00329,0,consu,1.0,Accesorios,1.20x0.80,,Electric Cable 20
+Cable electrico 24,A00330,1,consu,0.0,Accesorios,1.20x0.80,,Cable electrico 24
+Cable electrico 25,A00331,0,consu,1.25,Accesorios,1.20x0.80,,Electric Cable 25
+Cable electrico 30,A00332,0,consu,1.5,Accesorios,1.20x0.80,,Electric Cable 30
+Cable electrico 35,A00333,0,consu,1.75,Accesorios,1.20x0.80,,Electric Cable 35
+Cable electrico 38,A00334,0,consu,1.82,Accesorios,1.20x0.80,,Electric Cable 38
+Cable electrico 40,A00335,0,consu,2.0,Accesorios,1.20x0.80,,Electric Cable 40
+Cable electrico 42,A00336,1,consu,2.2,Accesorios,1.20x0.80,,Cable electrico 42
+Cable electrico 45,A00337,0,consu,2.25,Accesorios,1.20x0.80,,Electric Cable 45
+Cable electrico 48,A00338,1,consu,2.32,Accesorios,1.20x0.80,,Cable electrico 48
+Cable electrico 49,A00339,1,consu,0.0,Accesorios,1.20x0.80,,Cable electrico 49
+Cable electrico 50,A00340,0,consu,2.5,Accesorios,1.20x0.80,,Electric Cable 50
+Cable electrico 55,A00341,0,consu,2.75,Accesorios,1.20x0.80,,Electric Cable 55
+Cable electrico 60,A00342,0,consu,3.0,Accesorios,1.20x0.80,,Electric Cable 60
+Cable electrico 65,A00343,0,consu,3.25,Accesorios,1.20x0.80,,Electric Cable 65
+Cable electrico 75,A00344,0,consu,3.75,Accesorios,1.20x0.80,,Electric Cable 75
+Cable electrico 8,A00325,1,consu,0.4,Accesorios,1.20x0.80,,Cable electrico 8
+Cable speakon 10,A00308,0,consu,0.5,Accesorios,1.20x0.80,,Speakon Cable 10
+Cable speakon 14,A00309,1,consu,0.0,Accesorios,1.20x0.80,,Cable speakon 14
+Cable speakon 15,A00310,0,consu,0.75,Accesorios,1.20x0.80,,Speakon Cable 15
+Cable speakon 17,A00311,0,consu,0.82,Accesorios,1.20x0.80,,Speakon Cable 17
+Cable speakon 20,A00312,0,consu,1.0,Accesorios,1.20x0.80,,Speakon Cable 20
+Cable speakon 23,A00313,0,consu,1.12,Accesorios,1.20x0.80,,Speakon Cable 23
+Cable speakon 24,A00314,1,consu,0.0,Accesorios,1.20x0.80,,Cable speakon 24
+Cable speakon 25,A00315,0,consu,1.25,Accesorios,1.20x0.80,,Speakon Cable 25
+Cable speakon 26,A00316,1,consu,1.28,Accesorios,1.20x0.80,,Cable speakon 26
+Cable speakon 27,A00317,1,consu,0.0,Accesorios,1.20x0.80,,Cable speakon 27
+Cable speakon 30,A00318,0,consu,1.5,Accesorios,1.20x0.80,,Speakon Cable 30
+Cable speakon 33,A00319,1,consu,0.0,Accesorios,1.20x0.80,,Cable speakon 33
+Cable speakon 35,A00320,0,consu,1.75,Accesorios,1.20x0.80,,Speakon Cable 35
+Cable speakon 40,A00321,0,consu,2.0,Accesorios,1.20x0.80,,Speakon Cable 40
+Cable speakon 45,A00322,1,consu,2.25,Accesorios,1.20x0.80,,Cable speakon 45
+Cable speakon 55,A00323,0,consu,2.75,Accesorios,1.20x0.80,,Speakon Cable 55
+Cable speakon 65,A00324,0,consu,3.25,Accesorios,1.20x0.80,,Speakon Cable 65
+Caja Líquido Xtraice 10L,A00008,494,consu,9.6,Accesorios,1.20x0.80,3402.90.10.00,Box Max Slider Xtraice
+Caja herramientas Grande,A00402,0,consu,10.0,,,,Installation kit
+Caja herramientas mediana,A00468,0,consu,0.0,,,,Installation kit (M)
+Cajas de Luz,A00240,150,consu,4.0,,,8536.00.00.00,Light boxes
+Cajas de film extensible blanco,A00281,1,consu,0.0,,,,Cajas de film extensible blanco
+Cajas de film extensible blanco,,1,consu,,,,,
+Cajas de precinto xtraice,A00282,1,consu,0.0,,,,Cajas de precinto xtraice
+Cajas de precinto xtraice,,1,consu,,,,,
+Cajón metálico paneles,A00462,990,consu,0.0,,,,Panels metal case
+Calcetines de plastico (paquete de 100 unidades),A00087,10,consu,0.1,Accesorios,1.20x0.80,,Plastic socks (100 units)
+Calle curling,A00470,1,consu,,,,,
+Calle curling 12x3 con bordes,,"8.995,00",consu,714,Paneles,2.00x1.00,,
+Calle curling 12x3 sin bordes,,"8.495,00",consu,684,Paneles,2.00x1.00,,
+Calle curling 16x3 con bordes,,"9.995,00",consu,950,Paneles,2.00x1.00,,
+Calle curling 16x3 sin bordes,,"9.495,00",consu,912,Paneles,2.00x1.00,,
+Camino,A00442,0,consu,0.0,,,,Path
+Carga y descarga,A00600,0,service,0.0,,,,Carga y descarga
+Carteles,A00437,0,consu,0.0,,,,Skater poster
+Cascos,A00101,25,consu,0.6,Accesorios,1.20x0.80,6506.10.10.00,Helmet
+Caseta Madera Plegable 3x2,A00480,1,consu,600.0,Especial,,,Folding Wooden Shack (3x2m)
+Caseta Madera Plegable 4x2,A00479,"8.000,00",consu,750.0,Especial,,,Folding Wooden Shack (4x2m)
+Caseta Modulo 2x2,A00100,1,consu,9.2,,,,Caseta módulo 2x2
+Caseta madera mediana 10m2,A00260,"6.000,00",consu,1247.0,Especial,,,Medium wood stand
+Caseta madera pequeña 4m2,A00259,1,consu,326.0,Especial,,,Small wood stand 4m2
+Cesped artificial para curling (m2),A00504,20,consu,0.0,,,,Artificial Turf (m2)
+Cuchillas doble lama,A00233,"19,5",consu,0.2,Accesorios,1.20x0.80,,Double blade skates
+Curling boards,A00404,1,consu,,,,,
+DMX,A00248,1,consu,0.3,Accesorios,1.20x0.80,85.43.70.90,DMX
+DUA Valoración IVA 10 %,DUA10,1,service,,,,,
+DUA Valoración IVA 21 %,DUA21,1,service,,,,,
+DUA Valoración IVA 4 %,DUA4,1,service,,,,,
+Decoración pack 2x4,A00443,"3.360,00",consu,0.0,,,,Decoration pack 2*4
+Decoración pack 4x8,A00444,"10.500,00",consu,0.0,,,,Decoration pack 4*8
+Decoración pack 6x12,A00445,"27.740,00",consu,0.0,,,,Decoration pack 6*12
+Decoración pack 6x12 Iceberg,A00446,"28.420,00",consu,0.0,,,,Decoration Pack 6*12 Iceberg
+Deposito,,1,service,,,,,
+Deposito,A00397,1,service,0.0,,,,Deposito
+Descuento,A00419,1,service,0.0,,,,Descuento
+Descuento,,1,service,,,,,
+Desmontaje,A00113,0,service,0.0,,,,Disassembly
+Desmontaje supervisión,A00114,0,service,0.0,,,,Disassembly supervision
+Diamante 1001 Xtraice,A00187,61,consu,0.1,Accesorios,1.20x0.80,,Diamond Xtraice 1001
+Diamante ONE Xtraice,A00186,88,consu,0.1,Accesorios,1.20x0.80,,Diamond Xtraice ONE
+Disco de limpieza negro,A00407,20,consu,0.0,,,,Black Cleaning Disk
+Disco limpieza rojo,A00406,20,consu,0.0,,,,Red Cleaning Disc
+EPI Afiladora,A00436,20,consu,0.0,,,,Sharpener EPI
+Entrega estándar,Delivery_007,0,service,,,,,
+Entrenador de patinaje,A00121,0,service,0.0,,,,Figure skate trainer
+Entrenador hockey servicio,A00304,1,service,0.0,,,,Hockey trainer service
+Entrenador hockey Servicio,,0,service,,,,,
+Envases y embalajes,A00264,1,consu,0.0,,,,Envases y embalajes
+Envases y embalajes,,1,consu,,,,,
+Equipo de luz y sonido (seg¡un sitio),A00110,1,consu,5.3,Accesorios,1.20x0.80,,Equipo de luz y sonido (seg¡un sitio)
+Extra ruedas para estantería,A00454,0,consu,0.0,,,,Extra wheels for skate shelves
+Flightcase luz y sonido,A00351,1,consu,30.0,Accesorios,1.20x0.80,,Flightcase luz y sonido
+Focos blanco,A00242,240,consu,5.0,Accesorios,1.20x0.80,,White light projector
+Focos color,A00241,375,consu,5.0,Accesorios,1.20x0.80,,Colour light projector
+Gastos de envío,,0,service,,,,,
+Gastos de instalación y montajes,,1,service,,,,,
+Gastos de instalación y montajes,A00263,1,service,0.0,,,,Installation and assembly costs
+Gestión,A00115,0,service,0.0,,,,Management
+Gestión supervisión,A00116,1,service,0.0,,,,Management supervisor
+Gorros de plasticos (paquete de 100 unidades),A00102,10,consu,0.1,Accesorios,1.20x0.80,,Plastic helmets (100 units)
+Granza (materia prima),A00355,1,consu,38.0,,,,Granza (materia prima)
+Guantes de proteccion,A00103,9,consu,0.2,Accesorios,1.20x0.80,6116.10.20,Gloves
+"Guirnaldas 2,7m/ud",A00048,1,consu,12.0,,,,"Guirnaldas 2,7m/ud"
+Hidrolimpiadora,A00092,"1.495,00",consu,48.0,Accesorios,1.20x0.80,,Water pressure machine
+INACTIVO_Cables XLR pequeños,A00247,1,consu,,,,,
+Iluminación (4 focos),,1,consu,,,,,
+Iluminación (4 focos),A00278,1,consu,0.0,,,,Iluminación (4 focos)
+Indemnización por daños,A00358,1,service,0.0,,,,Indemnización por daños
+Indemnización por daños,,1,service,,,,,
+Inserción Diana de Curling,A00495,"2.800,00",service,0.0,,,,Curling Rings
+Inserción de logo o líneas,A00007,1,service,0.0,,,,Logo insertion
+Inserción de logo o líneas,,657,service,,,,,
+Instalación y capacitación,,0,service,,,,,
+Interactive Curling Customized Control App,A00450,0,service,0.0,,,,Interactive Curling Customized Co
+Interactive curling system,A00403,"10.781,00",service,0.0,,,,Interactive curling system
+Interactive system,A00441,0,consu,0.0,,,,Interactive system
+Kit Piedras Eisstock Xtraice (4 piedras),A00273,235,consu,6.0,Accesorios,1.20x0.80,,Xtraice Curling Stones
+Kit Unihockey,A00094,130,consu,5.0,Accesorios,1.20x0.80,95.06.99,Kit Unihockey
+Kit de Instalación,A00089,59,consu,4.5,Accesorios,1.20x0.80,8206.00.00.00,Installation kit
+Kit de limpieza (home),A00492,75,consu,2.5,Accesorios,1.20x0.80,,Xtraice Home Deep Cleaning Kit
+Kit de limpieza a fondo,A00349,595,consu,22.0,Accesorios,1.20x0.80,34.02.90.10,Deep cleaning kit
+Kit de numeración de patines,A00095,0,consu,5.0,Accesorios,1.20x0.80,,Numbering kit
+Kit de proteccion,A00275,20,consu,0.6,Accesorios,1.20x0.80,9506.91.90.00,Protection kit
+Kit mantenimiento de patines,A00085,75,consu,2.5,Accesorios,1.20x0.80,,Maintenance skates kit
+Kit no fijación,A00431,1,service,0.0,,,,Kit no fijación
+Kit no fijación (metro lineal),A00508,25,consu,0.0,,,7214997910,Not fixed kit
+Kit numeración patines,A00435,1,service,0.0,,,,Kit numeración patines
+Kit sujeción luz y sonido CON suelo técnico,A00426,0,consu,0.0,,,,Light and sound clasp kit with raised fllor
+Kit sujeción luz y sonido SIN suelo técnico,A00427,0,consu,20.0,,,,Light and sound clasp kit without raised floor
+Liquido Xtraice 1L,A00481,50,consu,0.0,,,,Xtraice Slider 1L
+Logística,,0,service,,,,,
+Lubricante líquido silicona 1.000 KG (PCC),A00195,1,consu,9.6,Accesorios,1.20x0.80,,Lubricante líquido silicona 1.000 KG (PCC)
+Líquido Granel Xtraice 1l,A00428,1,consu,0.0,,,,Líquido Granel Xtraice 1l
+Maleta de montador,A00451,0,consu,0.0,,,,Installer Case
+Maquina burbujas,A00254,1,consu,5.3,Accesorios,1.20x0.80,,Bubble machine
+Maquina de limpieza mediana 220V BR 40/10,A00506,1,consu,42.0,Maquinaria independiente,,,Maquina de limpieza mediana 220V BR 40/10
+Maquina de nieve artificial grande,A00395,"1.495,00",consu,0.0,,,,Large artificial snow machine
+Materia prima,A00353,1,consu,0.0,,,,Materia prima
+Material para Tobogán,A00473,1,consu,0.0,,,,Material para Tobogán
+Material para ferias,A00472,1,consu,0.0,,,,Material para ferias
+Material para las ferias (EAS/IAAPA 2016),A00368,1,consu,0.0,,,,Material para las ferias (EAS/IAAPA 2016)
+Mecanizado de placas,A00194,1,service,0.0,,,,Mecanizado de placas
+Mesa mezcla,A00244,390,consu,3.0,Accesorios,1.20x0.80,,Mixer DJ
+Microfonos,A00249,45,consu,0.3,Accesorios,1.20x0.80,85.18.10,Microphone
+Montaje,A00111,0,service,0.0,,,,Assembly
+Montaje supervisión,A00112,1,service,0.0,,,,Assembly supervision
+Mopa,A00447,25,consu,1.0,Accesorios,1.20x0.80,3625.20.00,Mop
+Mueble afiladora,A00191,1,consu,0.0,,,,Mueble afiladora
+Muñeco de burbujas,A00108,970,consu,30.0,Accesorios,1.20x0.80,,Bubble snowman
+Máquina de limpieza 110V,A00365,"2.590,00",consu,0.0,Accesorios,1.20x0.80,,Cleaning machine 110 V
+Máquina de limpieza 220V,A00090,"2.590,00",consu,50.0,Accesorios,1.20x0.80,8424.30.90.00,Cleaning machine 220V
+Máquina de limpieza grande,A00091,"9.995,00",consu,309.0,Maquinaria independiente,,,Cleaning machine big
+Máquina de limpieza mediana 110 V,A00394,"4.995,00",consu,0.0,Maquinaria independiente,,,Cleaning machine 110V
+Máquina de limpieza mediana 220 V,A00370,"4.995,00",consu,0.0,Maquinaria independiente,,,Cleaning machine
+Máquina de nieve artificial,A00109,290,consu,5.3,Accesorios,1.20x0.80,,Artificial snow machine
+Nuevo pie de valla (con tornapunta),A00284,120,consu,7.8,Pies de Valla,1.10x1.10,73.06.61.99,Foot barrier holder
+Nuevo pie de valla Smartice (con tornapunta),A00502,120,consu,0.0,Pies de Valla,1.10x1.10,,Nuevo pie de valla Smartice (con tornapunta)
+Nuevo pie de valla fibra (con tornapunta),A00301,120,consu,7.8,Pies de Valla,1.10x1.10,73.06.61.99,New Fibre Barrier Accessory
+Olaf,A00361,1,consu,4.0,,,,Olaf
+Opción de compra,A00274,1,service,0.0,,,,Option to buy
+Osos,A00097,295,consu,12.0,Accesorios,1.20x0.80,9503.00.00.90,Bear Skating Aid
+Otros accesorios,,0,consu,,,,,
+Otros accesorios,A00292,1,consu,0.0,,,,Otros accesorios
+PACK AYUDAS AL PATINAJE (650),,650,consu,,,,,
+PACK DESECHABLES HIGIÉNICOS,,1,consu,,,,,
+PACK HOCKEY (160),,160,consu,,,,,
+PACK PROTECCIONES (250),,250,consu,,,,,
+PACK ZONA DE CAMBIO (320),,320,consu,,,,,
+PATIN C,,0,consu,,,,9506.70.40.00,
+PRESSURE WHASHER ACCESORY,A00201,1,consu,0.0,,,,PRESSURE WHASHER ACCESORY
+Pack de 28 cinchas (para 200m2),A00452,0,consu,0.0,,,,Pack of straps
+Pack de Eisstock,,0,consu,,,,,
+Pack de luz y sonido 4 puntos,A00424,"4.900,00",consu,10.0,Accesorios,1.20x0.80,,"Light and sound package, 4 spots"
+Pack de luz y sonido 8 puntos,A00425,"8.495,00",consu,15.0,Accesorios,1.20x0.80,,"Light and sound package, 8 spots"
+Pack desmontaje para 100m2,A00482,0,consu,15.0,Accesorios,1.20x0.80,8303009000,Disassembly pack for 100m2
+Panel Amazon,A00422,1,consu,0.0,,,,Panel Amazon
+Panel Lite Other Xtraice,A00180,1,consu,13.0,,,,Panel Lite Other Xtraice
+Panel Lite R,A00409,1,consu,12.0,,,3901.20.10.00,Panel Lite R
+Panel Lite XL Other Xtraice,A00179,1,consu,13.0,,,,Panel Lite XL Other Xtraice
+Panel Lite XL Xtraice,A00123,1,consu,0.0,,,,Panel Lite XL Xtraice
+Panel Lite Xtraice,A00004,174,consu,11.5,Paneles,2.00x1.00,3901.20.10.00,Xtraice LITE Panel
+Panel Lite Xtraice VP,A00363,174,consu,13.0,Paneles,2.00x1.00,,Xtraice LITE Panel VP
+Panel PRO 3T Xtraice,A00396,1,consu,0.0,,,,Panel PRO 3T Xtraice
+Panel PRO Other Xtraice,A00178,1,consu,38.0,,,,Panel PRO Other Xtraice
+Panel PRO R,A00124,500,consu,38.0,Paneles,2.00x1.00,,Xtraice Panel Pro R
+Panel PRO RM4T,A00218,1,consu,34.0,Paneles,2.00x1.00,,Panel PRO RM4T
+Panel PRO RM4T 20,A00221,1,consu,0.0,,,,Panel PRO RM4T 20
+Panel PRO RM4TN,A00217,1,consu,34.0,Paneles,2.00x1.00,,Panel PRO RM4TN
+Panel PRO V Xtraice,A00125,1,consu,0.0,,,,Panel PRO V Xtraice
+Panel PRO V1 Xtraice,A00181,1,consu,38.0,Paneles,2.00x1.00,,Panel PRO V1 Xtraice
+Panel PRO V6 Xtraice,A00176,1,consu,38.0,Paneles,2.00x1.00,,Panel PRO V6 Xtraice
+Panel PRO V7 Xtraice,A00177,1,consu,38.0,Paneles,2.00x1.00,,Panel PRO V7 Xtraice
+Panel PRO V9,A00408,1,consu,36.5,Paneles,2.00x1.00,,Panel PRO V9
+Panel Pro S Xtraice,A00360,1,consu,38.0,Paneles,2.00x1.00,,Panel Pro S Xtraice
+Panel Pro T,A00474,1,consu,38.5,Paneles,2.00x1.00,3901.20.10.00,Panel Pro T
+Panel Pro VP Xtraice,A00354,500,consu,38.0,Paneles,2.00x1.00,,Xtraice Pro VP Panel
+Panel Pro Xtraice,A00005,500,consu,36.5,Paneles,2.00x1.00,3901.20.10.00,Xtraice Pro Panel
+Panel Remec PRO,A00420,500,consu,34.0,Paneles,2.00x1.00,,Panel Remec PRO
+Panel Roller,A00509,"24,61",consu,0.48,,,,Panel Roller
+Panel Superlite Xtraice,A00126,1,consu,13.0,Paneles,2.00x1.00,,Panel Superlite Xtraice
+Panel cortado esquina,A00432,500,consu,0.0,,,,Cut panel
+Panel corte personalizado,A00453,500,consu,0.0,,,,Cut to size customised panels
+Panel linea 15 cm,A00367,1,consu,0.0,,,,Panel line 15 cm
+Panel linea 30 cm,A00410,160,consu,0.0,,,,Panel line 30 cm
+Panel policarbonato vallas,A00346,67,consu,0.0,,,,Panel policarbonato vallas
+Panel remecanizado Lite,A00421,1,consu,11.0,Paneles,2.00x1.00,,Panel remecanizado Lite
+Panel tobogán,A00398,1,consu,12.0,,,3901.20.10.00,Panel tobogán
+Par de guantes para trabajadores,A00456,0,consu,0.0,,,,Safety gloves
+Par de uñas carretilla elevadora,A00457,0,consu,0.0,,,,Pair of nails forklift
+Par de valla para rampa,A00253,1,consu,39.0,,,,Barrier accesory ramp
+Patin C (tallas surtidas 25-47),A00485,64,consu,3.0,Patines,1.00x1.00,9506.70.40.00,Skates C
+Patin X (tallas surtidas 25-47),A00609,100,service,0.0,Patines,1.00x1.00,,Skates X
+Patin R talla 49,A00423,1,consu,0.0,,,,Patin R talla 49
+Patineros,A00078,600,consu,40.0,Patineros,1.60x0.90,9403.20.00.86,Skate shelves
+Patines A talla 25,A00055,1,consu,1.6,Patines,1.00x1.00,,Patines A talla 25
+Patines A talla 26,A00056,1,consu,1.6,Patines,1.00x1.00,,Patines A talla 26
+Patines A talla 27,A00057,1,consu,1.6,Patines,1.00x1.00,,Patines A talla 27
+Patines A talla 28,A00058,1,consu,1.6,Patines,1.00x1.00,,Patines A talla 28
+Patines A talla 29,A00059,1,consu,1.6,Patines,1.00x1.00,,Patines A talla 29
+Patines A talla 30,A00060,1,consu,1.6,Patines,1.00x1.00,,Patines A talla 30
+Patines A talla 31,A00061,1,consu,1.8,Patines,1.00x1.00,,Patines A talla 31
+Patines A talla 32,A00062,1,consu,1.8,Patines,1.00x1.00,,Patines A talla 32
+Patines A talla 33,A00063,1,consu,1.8,Patines,1.00x1.00,,Patines A talla 33
+Patines A talla 34,A00064,1,consu,1.8,Patines,1.00x1.00,,Patines A talla 34
+Patines A talla 35,A00065,1,consu,1.8,Patines,1.00x1.00,,Patines A talla 35
+Patines A talla 36,A00066,1,consu,1.8,Patines,1.00x1.00,,Patines A talla 36
+Patines A talla 37,A00067,1,consu,1.8,Patines,1.00x1.00,,Patines A talla 37
+Patines A talla 38,A00068,1,consu,1.8,Patines,1.00x1.00,,Patines A talla 38
+Patines A talla 39,A00069,1,consu,2.2,Patines,1.00x1.00,,Patines A talla 39
+Patines A talla 40,A00070,1,consu,2.2,Patines,1.00x1.00,,Patines A talla 40
+Patines A talla 41,A00071,1,consu,2.2,Patines,1.00x1.00,,Patines A talla 41
+Patines A talla 42,A00072,1,consu,2.2,Patines,1.00x1.00,,Patines A talla 42
+Patines A talla 43,A00073,1,consu,2.5,Patines,1.00x1.00,,Patines A talla 43
+Patines A talla 44,A00074,1,consu,2.5,Patines,1.00x1.00,,Patines A talla 44
+Patines A talla 45,A00075,1,consu,2.5,Patines,1.00x1.00,,Patines A talla 45
+Patines A talla 46,A00076,1,consu,2.7,Patines,1.00x1.00,,Patines A talla 46
+Patines A talla 47,A00077,1,consu,2.7,Patines,1.00x1.00,,Patines A talla 47
+Patines C talla 25,A00153,64,consu,1.6,Patines,1.00x1.00,9506.70.40.00,Skates C size EU25/USA 8.0C
+Patines C talla 26,A00154,64,consu,1.6,Patines,1.00x1.00,9506.70.40.00,Skates C size EU26/USA 9.0C
+Patines C talla 27,A00155,64,consu,1.6,Patines,1.00x1.00,9506.70.40.00,Skates C size EU27/USA 10.0C
+Patines C talla 28,A00156,64,consu,1.6,Patines,1.00x1.00,9506.70.40.00,Skates C size EU28/USA10.5C
+Patines C talla 29,A00157,64,consu,1.6,Patines,1.00x1.00,9506.70.40.00,Skates C size EU29/USA 11.5C
+Patines C talla 30,A00158,64,consu,1.6,Patines,1.00x1.00,9506.70.40.00,Skates C size EU30/USA 12.5C
+Patines C talla 31,A00159,64,consu,1.8,Patines,1.00x1.00,9506.70.40.00,Skates C size EU31/USA 13.0C
+Patines C talla 32,A00160,64,consu,1.8,Patines,1.00x1.00,9506.70.40.00,Skates C size EU32/USA 1.0Y
+Patines C talla 33,A00161,64,consu,1.8,Patines,1.00x1.00,9506.70.40.00,Skates C size EU33/USA 1.5Y
+Patines C talla 34,A00162,64,consu,1.8,Patines,1.00x1.00,9506.70.40.00,Skates C size EU34/USA 2.5Y
+Patines C talla 35,A00163,64,consu,1.8,Patines,1.00x1.00,9506.70.40.00,Skates C size EU35/USA 3.0Y
+Patines C talla 36,A00164,64,consu,1.8,Patines,1.00x1.00,9506.70.40.00,Skates C size EU36/USA 4.0Y
+Patines C talla 37,A00165,64,consu,1.8,Patines,1.00x1.00,9506.70.40.00,Skates C size EU37/USA 4.5Y
+Patines C talla 38,A00166,64,consu,1.8,Patines,1.00x1.00,9506.70.40.00,Skates C size EU38/USA 5.5Y
+Patines C talla 39,A00167,64,consu,2.2,Patines,1.00x1.00,9506.70.40.00,Skates C size EU39/USA 6.5
+Patines C talla 40,A00168,64,consu,2.2,Patines,1.00x1.00,9506.70.40.00,Skates C size EU40/USA 7
+Patines C talla 41,A00169,64,consu,2.2,Patines,1.00x1.00,9506.70.40.00,Skates C size EU41/USA 8
+Patines C talla 42,A00170,64,consu,2.2,Patines,1.00x1.00,9506.70.40.00,Skates C size EU42/USA 8.5
+Patines C talla 43,A00171,64,consu,2.5,Patines,1.00x1.00,9506.70.40.00,Skates C size EU43/USA 9.5
+Patines C talla 44,A00172,64,consu,2.5,Patines,1.00x1.00,9506.70.40.00,Skates C size EU44/USA 10
+Patines C talla 45,A00173,64,consu,2.5,Patines,1.00x1.00,9506.70.40.00,Skates C size EU45/USA 11
+Patines C talla 46,A00174,64,consu,2.7,Patines,1.00x1.00,9506.70.40.00,Skates C size EU46/USA 12
+Patines C talla 47,A00175,64,consu,2.7,Patines,1.00x1.00,9506.70.40.00,Skates C size EU47/USA 13
+Patines Roller talla 25,A00129,95,consu,1.6,Patines,1.00x1.00,,Skates Roller size EU25
+Patines Roller talla 26,A00130,95,consu,1.6,Patines,1.00x1.00,,Skates Roller size EU26
+Patines Roller talla 27,A00131,95,consu,1.6,Patines,1.00x1.00,,Skates Roller size EU27
+Patines Roller talla 28,A00132,95,consu,1.6,Patines,1.00x1.00,,Skates Roller size EU28
+Patines Roller talla 29,A00133,95,consu,1.6,Patines,1.00x1.00,,Skates Roller size EU29
+Patines Roller talla 30,A00134,95,consu,1.6,Patines,1.00x1.00,,Skates Roller size EU30
+Patines Roller talla 31,A00135,95,consu,1.8,Patines,1.00x1.00,,Skates Roller size EU31
+Patines Roller talla 32,A00136,95,consu,1.8,Patines,1.00x1.00,,Skates Roller size EU32
+Patines Roller talla 33,A00138,95,consu,1.8,Patines,1.00x1.00,,Skates Roller size EU33
+Patines Roller talla 34,A00139,95,consu,1.8,Patines,1.00x1.00,,Skates Roller size EU34
+Patines Roller talla 35,A00140,95,consu,1.8,Patines,1.00x1.00,,Skates Roller size EU35
+Patines Roller talla 36,A00141,95,consu,1.8,Patines,1.00x1.00,,Skates Roller size EU36
+Patines Roller talla 37,A00142,95,consu,1.8,Patines,1.00x1.00,,Skates Roller size EU37
+Patines Roller talla 38,A00143,95,consu,1.8,Patines,1.00x1.00,,Skates Roller size EU38
+Patines Roller talla 39,A00144,95,consu,2.2,Patines,1.00x1.00,,Skates Roller size EU39
+Patines Roller talla 40,A00145,95,consu,2.2,Patines,1.00x1.00,,Skates Roller size EU40
+Patines Roller talla 41,A00146,95,consu,2.2,Patines,1.00x1.00,,Skates Roller size EU41
+Patines Roller talla 42,A00147,95,consu,2.2,Patines,1.00x1.00,,Skates Roller size EU42
+Patines Roller talla 43,A00148,95,consu,2.5,Patines,1.00x1.00,,Skates Roller size EU43
+Patines Roller talla 44,A00149,95,consu,2.5,Patines,1.00x1.00,,Skates Roller size EU44
+Patines Roller talla 45,A00150,95,consu,2.5,Patines,1.00x1.00,,Skates Roller size EU45
+Patines Roller talla 46,A00151,95,consu,2.7,Patines,1.00x1.00,,Skates Roller size EU46
+Patines Roller talla 47,A00152,95,consu,2.7,Patines,1.00x1.00,,Skates Roller size EU47
+Patines X Talla 25,A00371,100,consu,1.6,Patines,1.00x1.00,,Skates X size EU25/USA 8.0C
+Patines X Talla 26,A00372,100,consu,1.6,Patines,1.00x1.00,,Skates X size EU26/USA 9.0C
+Patines X Talla 27,A00373,100,consu,1.6,Patines,1.00x1.00,,Skates X size EU27/USA 10.0C
+Patines X Talla 28,A00374,100,consu,1.6,Patines,1.00x1.00,,Skates X size EU28/USA 10.5C
+Patines X Talla 29,A00375,100,consu,1.6,Patines,1.00x1.00,,Skates X size EU29/USA 11.5C
+Patines X Talla 30,A00376,100,consu,1.6,Patines,1.00x1.00,,Skates X size EU30/USA 12.5C
+Patines X Talla 31,A00377,100,consu,1.8,Patines,1.00x1.00,,Skates X size EU31/USA 13.0C
+Patines X Talla 32,A00378,100,consu,1.8,Patines,1.00x1.00,,Skates X size EU32/USA 1.0Y
+Patines X Talla 33,A00379,100,consu,1.8,Patines,1.00x1.00,,Skates X size EU33/USA 1.5Y
+Patines X Talla 34,A00380,100,consu,1.8,Patines,1.00x1.00,,Skates X size EU34/USA 2.5Y
+Patines X Talla 35,A00381,100,consu,1.8,Patines,1.00x1.00,,Skates X size EU35/USA 3.0Y
+Patines X Talla 36,A00382,100,consu,1.8,Patines,1.00x1.00,,Skates X size EU36/USA 4.0Y
+Patines X Talla 37,A00383,100,consu,1.8,Patines,1.00x1.00,,Skates X size EU37/USA 4.5Y
+Patines X Talla 38,A00384,100,consu,1.8,Patines,1.00x1.00,,Skates X size EU38/USA 5.5Y
+Patines X Talla 39,A00385,100,consu,2.2,Patines,1.00x1.00,,Skates X size EU39/USA 6.5
+Patines X Talla 40,A00386,100,consu,2.2,Patines,1.00x1.00,,Skates X size EU40/USA 7.0
+Patines X Talla 41,A00387,100,consu,2.2,Patines,1.00x1.00,,Skates X size EU41/USA 8.0
+Patines X Talla 42,A00388,100,consu,2.2,Patines,1.00x1.00,,Skates X size EU42/USA 8.5
+Patines X Talla 43,A00389,100,consu,2.5,Patines,1.00x1.00,,Skates X size EU43/USA 9.5
+Patines X Talla 44,A00390,100,consu,2.5,Patines,1.00x1.00,,Skates X size EU44/USA 10
+Patines X Talla 45,A00391,100,consu,2.5,Patines,1.00x1.00,,Skates X size EU45/USA 11
+Patines X Talla 46,A00392,100,consu,2.7,Patines,1.00x1.00,,Skates X size EU46/USA 12
+Patines X Talla 47,A00393,100,consu,2.7,Patines,1.00x1.00,,Skates X size EU47/USA 13
+Patinetes,A00238,1,consu,0.0,,,,Patinetes
+Pie de valla alu,A00137,37,consu,7.8,Pies de Valla,1.10x1.10,73.06.61.99,Barrier support aluminium
+Pie de valla fibra,A00182,37,consu,7.8,Pies de Valla,1.10x1.10,,Barrier accesory fiber
+Piedra afiladora Xtraice,A00083,99,consu,0.2,Accesorios,1.20x0.80,6804.30,Grinding wheel sharpener
+Piedra afiladora Xtraice 1001,A00190,29,consu,0.1,Accesorios,1.20x0.80,,Grinding wheel sharpener 1001
+Piedra afiladora Xtraice ONE,A00189,79,consu,0.1,Accesorios,1.20x0.80,,Grinding wheel sharpener ONE
+Piedra de repaso Xtraice,A00084,32,consu,0.05,Accesorios,1.20x0.80,,Horning stone (5 units)
+Piedras Curling Xtraice PRO,A00369,198,consu,5.0,Accesorios,1.20x0.80,,Xtraice Curling Stones PRO
+Pinguinos,A00098,295,consu,12.0,Accesorios,1.20x0.80,9503.00.00.90,Penguin Skating Aid
+Pista Uruguay,A00193,1,consu,0.0,,,,Pista Uruguay
+Placa Alveolar 150x100x22,A00053,1,consu,12.0,,,,Placa Alveolar 150x100x22
+Porteria futbol,A00236,1,consu,4.0,Accesorios,1.20x0.80,,Porteria futbol
+Porteria hockey,A00235,150,consu,4.0,Accesorios,1.20x0.80,9506.91.90,Hockey Goal
+Pulverizador,A00348,42,consu,1.1,Accesorios,1.20x0.80,,Sprayer
+Racleta agua (Haragán),A00448,25,consu,0.3,Accesorios,1.20x0.80,3625.20.00,Water Scrawl
+Rampa acceso a suelo técnico < 40 cm,A00261,450,consu,15.0,Accesorios,1.20x0.80,,XLR cable 50
+Rampa beginner,A00105,1,consu,28.7,Accesorios,1.20x0.80,,Rampa beginner
+Rampa de acceso al suelo técnico > 40 cm,A00467,0,consu,15.0,,,,Raised floor access ramp > 40 cm
+Rampa expert,A00107,1,consu,42.9,Accesorios,1.20x0.80,,Rampa expert
+Rampa pro,A00106,1,consu,28.7,Accesorios,1.20x0.80,3901.20.10.00,Rampa pro
+Regletas eléctricas,A00251,1,consu,0.3,,,85.36.90.85,Regletas eléctricas
+Rollo Film (1 unidad),A00458,0,consu,2.0,Accesorios,1.20x0.80,,Packing covering Film
+Rollo cable eléctrico 40m,A00252,1,consu,5.0,Accesorios,1.20x0.80,,Rollo cable eléctrico 40m
+Servicio Mantenimiento,,"1.500,00",service,,,,,
+Servicio Mantenimiento,A00483,1,service,0.0,,,,Maintenance Service
+Servicios personalizados,A00272,1,service,0.0,,,,Custom services
+Silla Oso,A00359,1,consu,5.0,Accesorios,1.20x0.80,,Bear Skating Aid Chair
+Sillas trineo Xtraice,A00347,275,consu,13.0,Accesorios,1.20x0.80,9506.91.00.30,Skate aid chairs Xtraice
+Solución de limpieza XTRAICE a fondo,A00352,65,consu,10.2,Accesorios,1.20x0.80,,Deep cleaning Solution Xtraice
+Solución de limpieza diaria Xtraice,A00405,35,consu,5.0,,,3402.90.10,Xtraice Daily Cleaning Liquid
+Sonido (4 altavoces),A00350,1,consu,0.0,,,,Sonido (4 altavoces)
+Soporte de altavoces,A00246,45,consu,0.5,Accesorios,1.20x0.80,85.18.21.00,Support speakers
+Spray desinfectante - 300ml,A00086,"6,5",consu,0.5,Accesorios,1.20x0.80,8424.81.10.00,Antibacterial spray
+Stick hockey,A00093,20,consu,3.0,Accesorios,1.20x0.80,,Hockey Stick
+Suelo Técnico (servicio),A00478,1,service,0.0,,,,Suelo Técnico (servicio)
+Suelo de caucho rollo,A00082,330,consu,81.0,Cauchos,1.20x1.30,4016.91.00.00,Rubber floor roll
+Suelo de espuma,A00088,120,consu,14.0,Cauchos,1.20x1.30,3921.19.00.00,Foam floor
+"Suelo de espuma LITE 0,5",A00429,120,consu,14.0,Cauchos,1.20x1.30,,"Foam floor LITE 0,5"
+Suelo técnico,A00288,0,consu,0.0,,,,Raised Floor
+Suelo técnico famori m2,A00285,1,consu,0.0,,,,Suelo técnico famori m2
+Supervisión instalación,A00265,1,service,0.0,,,,Installation supervision
+Tacos metálicos para fijación,A00099,1,consu,9.2,Accesorios,1.20x0.80,,Tacos metálicos para fijación
+Tapones Lite 100 uds,A00497,1,consu,0.0,,,,Tapones Lite 100 uds
+Tasas e impuestos,A00488,1,service,0.0,,,,Duties and taxes
+Tobogan 3 carriles con separadores,A00486,1,consu,0.0,,,,Tobogan 3 carriles con separadores
+Tobogán 2 carriles,A00490,1,consu,0.0,,,,Tobogán 2 carril
+Estructura Tobogán de 27m,A00510,0,"05 Accesorios dinamización, ayuda al patinaje, nuevos productos",0.0,,,0.0,Tobogán de 27m
+Tobogán de 3 carriles,A00399,"23.000,00",consu,0.0,,,,3 lane slide
+Tobogán de 3 carriles con estructura,,"120.000,00",consu,,,,,
+Tobogán de 6 carriles,A00401,"46.000,00",consu,0.0,,,,6 lane slide
+Tobogán de 6 carriles con estructura,,"220.000,00",consu,,,,,
+Tornapunta aluminio,A00184,1,consu,5.0,,,,Tornapunta aluminio
+Tornapuntas fibra,A00298,1,consu,5.0,,,,Special Barrier Accesory Fiber
+Tornillo para cemento 2 por pie,A00460,0,consu,0.0,,,,Cement screw 2 per foot
+Tornillos de madera 2 por pie,A00459,0,consu,0.0,,,,Wood screws 2 per foot
+Traje de agua (1 unidad),A00455,0,consu,0.5,Accesorios,1.20x0.80,,Waterproof coverall
+Transporte,A00117,0,service,0.0,,,,Shipping
+Transporte de vuelta,A00118,0,service,0.0,,,,Return Shipping
+Trineo,A00237,1,consu,5.0,Accesorios,1.20x0.80,9506.90.01,Trineo
+VARILLAS PARA TAPONES,A00196,1,consu,0.0,,,,VARILLAS PARA TAPONES
+Valla Lite alu blanca curva,A00019,1,consu,11.1,Vallas,2.00x1.25,7610.90.00.80,Valla Lite alu blanca curva
+Valla Lite alu blanca especial,A00018,1,consu,12.0,Vallas,2.00x1.25,7610.90.00.80,Valla Lite alu blanca especial
+Valla Lite alu blanca porteria,A00188,1,consu,0.0,,,,Valla Lite alu blanca porteria
+Valla Lite alu blanca puerta,A00021,1,consu,0.0,,,,Valla Lite alu blanca puerta
+Valla Lite alu blanca recta,A00017,1,consu,12.0,Vallas,2.00x1.25,,Valla Lite alu blanca recta
+Valla Lite alu plata curva,A00024,1,consu,12.0,Vallas,2.00x1.25,7610.90.00.80,Valla Lite alu plata curva
+Valla Lite alu plata especial,A00023,1,consu,12.0,Vallas,2.00x1.25,7610.90.00.80,Valla Lite alu plata especial
+Valla Lite alu plata puerta,A00025,1,consu,12.0,Vallas,2.00x1.25,,Valla Lite alu plata puerta
+Valla Lite alu plata recta,A00022,1,consu,12.0,Vallas,2.00x1.25,7610.90.00.80,Valla Lite alu plata recta
+Valla Lite fibra curva,A00011,1,consu,10.0,Vallas,2.00x1.25,7019.31.00.90,Valla Lite fibra curva
+Valla Lite fibra especial,A00010,1,consu,10.0,Vallas,2.00x1.25,7019.31.00.90,Valla Lite fibra especial
+Valla Lite fibra portería,A00209,1,consu,10.0,Vallas,2.00x1.25,,Valla Lite fibra portería
+Valla Lite fibra puerta,A00012,1,consu,20.0,Vallas,2.00x1.25,7019.90.00.20,Valla Lite fibra puerta
+Valla Lite fibra recta,A00009,1,consu,10.0,Vallas,2.00x1.25,,Valla Lite fibra recta
+Valla Smartice Especial,A00499,500,consu,0.0,,,,Valla Smartice Especial
+Valla Smartice Recta,A00498,500,consu,0.0,,,,Valla Smartice Recta
+Valla Smartice curva,A00500,750,consu,0.0,,,,Valla Smartice curva
+Valla alu blanca curva,A00040,1,consu,21.4,Vallas,2.00x1.25,,Valla alu blanca curva
+Valla alu blanca especial,A00039,1,consu,10.0,Vallas,2.00x1.25,,Valla alu blanca especial
+Valla alu blanca puerta,A00041,1,consu,21.4,Vallas,2.00x1.25,,Valla alu blanca puerta
+Valla alu blanca recta,A00038,1,consu,20.0,Vallas,2.00x1.25,,Valla alu blanca recta
+Valla alu curva,A00044,"1.800,00",consu,20.0,Vallas,2.00x1.25,7610.90.00.80,Corner Aluminium Barrier
+Valla alu curva antigua,A00036,1,consu,17.6,Vallas,2.00x1.25,,Barrier alu old curved
+Valla alu curva inversa,A00449,850,consu,20.0,,,7610.90.00.80,Inversed aluminium corner barrier
+Valla alu especial,A00043,600,consu,20.0,Vallas,2.00x1.25,7610.90.00.80,Special aluminium barrier
+Valla alu especial antigua,A00032,1,consu,17.6,Vallas,2.00x1.25,,Barrier alu old special
+Valla alu especial puerta,A00477,600,consu,0.0,Vallas,2.00x1.25,,Special aluminium gate barrier
+Valla alu madera blanca especial,A00047,1,consu,12.0,Vallas,2.00x1.25,,Valla alu madera blanca especial
+Valla alu madera blanca puerta,A00049,1,consu,12.0,Vallas,2.00x1.25,,Valla alu madera blanca puerta
+Valla alu madera blanca recta,A00046,1,consu,12.0,Vallas,2.00x1.25,,Valla alu madera blanca recta
+Valla alu madera especial,A00051,1,consu,12.0,Vallas,2.00x1.25,,Valla alu madera especial
+Valla alu madera puerta,A00054,1,consu,12.0,Vallas,2.00x1.25,,Valla alu madera puerta
+Valla alu madera recta,A00050,1,consu,12.0,Vallas,2.00x1.25,,Valla alu madera recta
+Valla alu puerta,A00045,750,consu,20.0,Vallas,2.00x1.25,7610.90.00.80,Gate aluminium barrier
+Valla alu puerta doble,A00430,"1.350,00",consu,0.0,,,,Double gate aluminium barrier
+Valla alu recta,A00042,600,consu,20.0,Vallas,2.00x1.25,7610.90.00.80,Straight aluminium barrier
+Valla aluminio recta antigua,A00031,1,consu,17.6,Vallas,2.00x1.25,,Barrier alu old straight
+Valla cercado madera 2x1,A00487,1,consu,8.0,Vallas,2.00x1.25,,Valla cercado madera 2x1
+Valla de hierro curva inversa,A00357,1,consu,38.0,,,,Valla de hierro curva inversa
+Valla fibra curva,A00028,850,consu,20.0,Vallas,2.00x1.25,7019.90.00.20,Curved Fibre Barrier
+Valla fibra especial,A00027,600,consu,17.5,Vallas,2.00x1.25,7019.90.00.20,Special Fibre Bar
+Valla fibra hockey curva,A00465,950,consu,20.0,,,7019.90.00.20,Curved Fibre Barrier
+Valla fibra hockey especial,A00464,700,consu,0.0,,,,Special Fibre Barrier
+Valla fibra hockey puerta,A00466,"1.100,00",consu,0.0,,,,Gate Fibre Barrier
+Valla fibra hockey recta,A00463,700,consu,20.0,,,7019.90.00.20,Straight Fibre Barrier
+Valla fibra puerta,A00030,"1.000,00",consu,17.6,Vallas,2.00x1.25,,Gate Fibre Barrier
+Valla fibra recta,A00026,600,consu,20.0,Vallas,2.00x1.25,7019.90.00.20,Straight Fibre Barrier
+Valla fibra transparente especial,A00300,1,consu,17.5,,,,Valla fibra transparente especial
+Valla fibra transparente recta,A00299,1,consu,17.5,,,,Valla fibra transparente recta
+Valla hierro curva,A00416,1,consu,0.0,,,,Valla hierro curva
+Valla hierro especial,A00417,1,consu,0.0,,,,Valla hierro especial
+Valla hierro puerta,A00418,1,consu,0.0,,,,Valla hierro puerta
+Valla hierro recta,A00415,1,consu,0.0,,,,Valla hierro recta
+Valla lite aluminio curva antigua,A00015,1,consu,10.0,,,,Barrier lite alu old curved
+Valla lite aluminio especial antigua,A00014,1,consu,10.0,,,,Barrier lite alu old special
+Valla lite aluminio puerta antigua,A00016,1,consu,10.0,,,,Barrier lite alu old gate
+Valla lite aluminio recta antigua,A00013,1,consu,10.0,,,,Barrier lite alu old straight
+Valla smartice puerta,A00501,900,consu,0.0,,,,Valla smartice puerta
+Vallas para camino,A00471,1,consu,0.0,,,,Vallas para camino
+Vinilo Xtraice en vallas,A00433,75,service,0.0,,,,XTRAICE vinyl on barrier
+Vinilo personalizado,,75,consu,,,,,
+Vinilo personalizado,A00434,1,consu,0.0,,,,Customized vinyl
+Visita técnica,A00489,1,service,0.0,,,,Visita técnica
+XLR cable 10,A00210,0,consu,0.5,Accesorios,1.20x0.80,,XLR cable 10
+XLR cable 15,A00356,1,consu,38.0,Accesorios,1.20x0.80,,XLR cable 15
+XLR cable 20,A00211,0,consu,1.0,Accesorios,1.20x0.80,,XLR cable 20
+XLR cable 25,A00212,0,consu,1.25,Accesorios,1.20x0.80,,XLR cable 25
+XLR cable 30,A00213,0,consu,1.5,Accesorios,1.20x0.80,,XLR cable 30
+XLR cable 35,A00214,0,consu,1.75,Accesorios,1.20x0.80,,XLR cable 35
+XLR cable 40,A00306,0,consu,2.0,Accesorios,1.20x0.80,,XLR cable 40
+XLR cable 45,A00215,0,consu,2.25,Accesorios,1.20x0.80,,XLR cable 45
+XLR cable 50,A00216,0,consu,2.5,Accesorios,1.20x0.80,,XLR cable 45
+XLR cable 75,A00307,0,consu,3.75,Accesorios,1.20x0.80,,XLR cable 75
+XXXXKit de limpieza Home,A00491,1,consu,0.0,,,,XXXXKit de limpieza Home
+Xtraice Kart L,A00413,0,consu,0.0,,,,Kart L
+Xtraice Kart M,A00412,0,consu,0.0,,,,Kart m
+Xtraice Kart S,A00411,0,consu,0.0,,,,Kart s
+Xtraice Kart XL,A00414,0,consu,0.0,,,,Kart XL
+Xtraice Pro Sport,A00484,1,consu,0.0,,,,Xtraice Pro Sport
+Xtraice panel 20mm blue,A00287,1,consu,36.5,Paneles,2.00x1.00,,Xtraice panel 20mm blue
+Xtraice panel 20mm red,A00207,1,consu,0.0,,,,Xtraice panel 20mm red
+Xtraice panel 8 mm black,A00192,1,consu,0.0,,,,Xtraice panel 8 mm black
+Xtraice panel 8 mm blue,A00199,1,consu,0.0,,,,Xtraice panel 8 mm blue
+Xtraice panel 8 mm green,A00205,1,consu,0.0,,,,Xtraice panel 8 mm green
+Xtraice panel 8 mm light blue,A00183,1,consu,0.0,,,,Xtraice panel 8 mm light blue
+Xtraice panel 8 mm orange,A00204,1,consu,0.0,,,,Xtraice panel 8 mm orange
+Xtraice panel 8 mm red,A00200,1,consu,0.0,,,,Xtraice panel 8 mm red
+Xtraice panel 8 mm yellow,A00206,1,consu,0.0,,,,Xtraice panel 8 mm yellow
+Xtraice panel HOME,A00366,1,consu,0.0,,,,Xtraice panel HOME
+Xtraice panel PRO 20mm black,A00294,500,consu,38.0,Paneles,2.00x1.00,,Xtraice panel PRO 20mm black
+Xtraice panel PRO 20mm blue,A00208,497,consu,38.0,Paneles,2.00x1.00,,Xtraice panel PRO 20mm blue
+Xtraice panel PRO 20mm green,A00295,500,consu,38.0,Paneles,2.00x1.00,,Xtraice panel PRO 20mm green
+Xtraice panel PRO 20mm orange,A00297,500,consu,38.0,Paneles,2.00x1.00,,Xtraice panel PRO 20mm orange
+Xtraice panel PRO 20mm red,A00305,500,consu,36.5,Paneles,2.00x1.00,,Xtraice panel PRO 20mm red
+Xtraice panel PRO 20mm yellow,A00296,500,consu,38.0,Paneles,2.00x1.00,,Xtraice panel PRO 20mm yellow
+Pista Curling 10x3,A00603,1,consu,570,Paneles,2.00x1.00,,
+Pista Curling 12x3,A00604,1,consu,684,Paneles,2.00x1.00,,
+Pista Curling 14x3,A00605,1,consu,798,Paneles,2.00x1.00,,
+Pista Curling 16x3, A00606,1,consu,0.0,Paneles,2.00x1.00,,Curling 14x3
+Remecanizado de paneles,A00602,,service,0.0,,,,Tongue and groove re-profiling
+Gastos de envío,A00608,,service,0.0,,,,Sipping/Delivery costs
+Estructura Tobogán de 3 carriles,A00610,,consu,0.0,,,,Tobogán de 3 carriles con estructura
+Pista Curling 10x3,A00616,,consu,0.0,,,,Pista Curling 10x3
+Diana de Curling inserción,A00615,,consu,0.0,,,,Diana de Curling inserción
+Pista Curling 14x3,A00614,,consu,0.0,,,,Curling 14x3
+Pista Curling 12x3,A00613,,consu,0.0,,,,Pista Curling 12x3
+Estructura Tobogán de 6 carriles,A00611,,consu,0.0,,,,Estructura Tobogán de 6 carriles
+Kit montaje calle Curling,A00617,,consu,0.0,,,,Curling installation kit
