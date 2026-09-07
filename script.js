@@ -873,13 +873,20 @@ function addPalletPatineros() {
 function addPalletAccesorios() {
     const newPalletNumber = getNextPalletNumber();
 
-    const sharpener = materiales.find(m => m.reference === "A00364" || m.description === "Sharpener machine");
-    const vacuum = materiales.find(m => m.reference === "A00080" || m.description === "Vacuum");
-
-    if (!sharpener || !vacuum) {
-        alert("Alguno de los materiales no se encuentra en la lista.");
-        return;
-    }
+    const sharpener = materiales.find(m => m.reference === 'A00364') || {
+        reference: 'A00364',
+        description: 'Double Xtraice Sharpener Machine',
+        nameEs: 'Afiladora doble Xtraice 220V',
+        netWeight: 38,
+        taricNumber: '8460.31.00.00'
+    };
+    const vacuum = materiales.find(m => m.reference === 'A00080') || {
+        reference: 'A00080',
+        description: 'Vacuum',
+        nameEs: 'Aspiradora',
+        netWeight: 11,
+        taricNumber: '8508.11.00'
+    };
 
     const newPallet = {
         id: `pallet-${Date.now()}-${Math.random().toString(36).slice(2, 9)}`,
