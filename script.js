@@ -687,12 +687,13 @@ function guardarProductoPersonalizado() {
 }
 
 function addPalletProPanels() {
-    const material = materiales.find(m => m.description === "Pro panels");
-
-    if (!material) {
-        alert("Material 'Pro panels' no encontrado en la lista.");
-        return;
-    }
+    const material = materiales.find(m => m.reference === 'A00005') || {
+        reference: 'A00005',
+        description: 'Panel Pro Xtraice',
+        nameEs: 'Panel Pro Xtraice',
+        netWeight: 36.5,
+        taricNumber: '3901.20.10.00'
+    };
 
     const units = 25;
     const newItem = {
@@ -958,22 +959,21 @@ function addPalletPiesDeValla() {
 
 function addPalletAlumBarriers() {
     const materialesRequeridos = [
-        { reference: 'A00044', units: 4 },
-        { reference: 'A00043', units: 4 },
-        { reference: 'A00045', units: 1 },
-        { reference: 'A00477', units: 1 },
-        { reference: 'A00042', units: 19 }
+        { reference: 'A00044', nameEs: 'Valla alu curva', units: 4 },
+        { reference: 'A00043', nameEs: 'Valla alu especial', units: 4 },
+        { reference: 'A00045', nameEs: 'Valla alu puerta', units: 1 },
+        { reference: 'A00477', nameEs: 'Valla alu especial puerta', units: 1 },
+        { reference: 'A00042', nameEs: 'Valla alu recta', units: 19 }
     ];
 
     const items = materialesRequeridos.map((m, index) => {
         const mat = materiales.find(material => material.reference === m.reference);
-        const fallbackWeight = m.reference === 'A00477' || !mat?.netWeight
-            ? materiales.find(material => material.reference === (m.reference === 'A00477' ? 'A00043' : 'A00042'))?.netWeight || 0
-            : mat.netWeight;
+        const fallbackMaterial = materiales.find(material => material.reference === (m.reference === 'A00477' ? 'A00043' : 'A00042'));
+        const fallbackWeight = mat?.netWeight || fallbackMaterial?.netWeight || 20;
         return {
             id: `item-${Date.now()}-${index}`,
-            description: mat?.description || m.reference,
-            nameEs: mat?.nameEs || '',
+            description: mat?.description || m.nameEs,
+            nameEs: mat?.nameEs || m.nameEs,
             units: m.units,
             netWeightUnit: fallbackWeight,
             totalWeight: fallbackWeight * m.units,
