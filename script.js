@@ -957,21 +957,25 @@ function addPalletPiesDeValla() {
 
 function addPalletAlumBarriers() {
     const materialesRequeridos = [
-        { desc: "Curved Silver Alum. Barriers", units: 4 },
-        { desc: "Special Silver Alum. Barriers", units: 5 },
-        { desc: "Straight Silver Alum. Barriers", units: 19 },
-        { desc: "Silver Alum. Gate Barriers", units: 1 }
+        { reference: 'A00044', units: 4 },
+        { reference: 'A00043', units: 4 },
+        { reference: 'A00045', units: 1 },
+        { reference: 'A00477', units: 1 },
+        { reference: 'A00042', units: 19 }
     ];
 
     const items = materialesRequeridos.map((m, index) => {
-        const mat = materiales.find(mat => mat.description === m.desc);
+        const mat = materiales.find(material => material.reference === m.reference);
+        const fallbackWeight = m.reference === 'A00477' || !mat?.netWeight
+            ? materiales.find(material => material.reference === (m.reference === 'A00477' ? 'A00043' : 'A00042'))?.netWeight || 0
+            : mat.netWeight;
         return {
             id: `item-${Date.now()}-${index}`,
-            description: m.desc,
+            description: mat?.description || m.reference,
             nameEs: mat?.nameEs || '',
             units: m.units,
-            netWeightUnit: mat?.netWeight || 0,
-            totalWeight: (mat?.netWeight || 0) * m.units,
+            netWeightUnit: fallbackWeight,
+            totalWeight: fallbackWeight * m.units,
             taric: mat?.taricNumber || ''
         };
     });
