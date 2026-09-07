@@ -928,12 +928,13 @@ function addPalletAccesorios() {
 }
 
 function addPalletPiesDeValla() {
-    const material = materiales.find(m => m.description === "New Barriers Accesory");
-
-    if (!material) {
-        alert("Material 'New Barriers Accesory' no encontrado en la lista.");
-        return;
-    }
+    const material = materiales.find(m => m.reference === 'A00284') || {
+        reference: 'A00284',
+        description: 'Nuevo pie de valla (con tornapunta)',
+        nameEs: 'Nuevo pie de valla (con tornapunta)',
+        netWeight: 7.8,
+        taricNumber: '73.06.61.99'
+    };
 
     const newItem = {
         id: `item-${Date.now()}-${Math.random().toString(36).slice(2, 9)}`,
