@@ -468,7 +468,6 @@ function createWarehousePallets(records) {
 
     addWarehouseQuantityPallets(pallets, panels, 25, [2, 1, 0.65], { remainderLimit: 30, stackable: 'YES' });
     addWarehouseBarrierPallets(pallets, barriers);
-                field += character;
     addWarehouseQuantityPallets(pallets, patineros, 10, [1.6, 0.85, 0.84]);
     if (feet.length) {
         const feetMaterial = { ...feet[0], quantity: feet.reduce((sum, record) => sum + record.quantity, 0) };
