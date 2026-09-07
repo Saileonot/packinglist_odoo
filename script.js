@@ -318,13 +318,18 @@ const warehouseReferenceMap = {
 function warehouseMaterial(record) {
     const mapped = warehouseReferenceMap[record.reference] || {};
     const material = materiales.find(item => item.description === mapped.description);
+    const fallbackReference = record.reference === 'A00477' ? 'A00043' :
+        (mapped.barrierType ? 'A00042' : '');
+    const fallbackMaterial = fallbackReference
+        ? materiales.find(item => item.reference === fallbackReference)
+        : null;
     return {
         ...record,
         ...mapped,
         description: material?.description || mapped.description || record.product,
         nameEs: mapped.displayName || (mapped.skateSize ? `Patines C talla ${mapped.skateSize}` : (material?.nameEs || record.product)),
         nameEn: material?.nameEn || material?.description || record.product,
-        netWeightUnit: material?.netWeight || 0,
+        netWeightUnit: material?.netWeight || fallbackMaterial?.netWeight || 0,
         taric: material?.taricNumber || ''
     };
 }
@@ -450,7 +455,7 @@ function isWarehouseToboggan(record) {
 function createWarehousePallets(records) {
     records = records.filter(record => !isWarehouseService(record) && !isWarehouseToboggan(record));
     const pallets = [];
-    const panels = records.filter(record => record.description === 'Pro panels');
+    const panels = records.filter(record => record.reference === 'A00005');
     const barriers = records.filter(record => record.barrierType);
     const skates = records.filter(record => record.skateSize);
     const rubber = records.filter(record => record.reference === 'A00082');
@@ -522,14 +527,24 @@ async function extractWarehouseOrder(file) {
         });
         const orderedLines = Object.keys(lines).sort((a, b) => b - a).map(y => lines[y]);
         documentLines.push(...orderedLines);
-        let pending = '';
         orderedLines.forEach(line => {
-            if (/^\d+\s+A\d{5}\b/.test(line)) pending = line;
-            else if (pending) pending += ` ${line}`;
-            if (pending && /\b(?:Usado|Nuevo)\s*$/.test(pending)) {
-                const match = pending.match(/^(\d+)\s+(A\d{5})\s+(.+?)\s+(?:Usado|Nuevo)\s*$/);
-                if (match) records.push({ quantity: Number(match[1]), reference: match[2], product: match[3].trim() });
-                pending = '';
+            const match = line.match(/^(\d+)\s+(A\d{5})\s+\[A\d{5}\]\s*(.*)$/);
+            if (match) {
+                records.push({
+                    quantity: Number(match[1]),
+                    reference: match[2],
+                    product: match[3].trim()
+                });
+                return;
+            }
+
+            const legacyMatch = line.match(/^(\d+)\s+(A\d{5})\s+(.+?)\s+(?:Usado|Nuevo)\s*$/);
+            if (legacyMatch) {
+                records.push({
+                    quantity: Number(legacyMatch[1]),
+                    reference: legacyMatch[2],
+                    product: legacyMatch[3].trim()
+                });
             }
         });
     }
