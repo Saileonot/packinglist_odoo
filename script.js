@@ -753,10 +753,11 @@ function deleteRow(id) {
 }
 
 function addPalletPatines() {
-    const material = materiales.find(m => m.description === "Skates C");
+    const material = materiales.find(m => m.description === 'PATIN C' && !m.reference);
+    const fallbackWeight = materiales.find(m => m.reference === 'A00485')?.netWeight || 0;
 
     if (!material) {
-        alert("Material 'Skates C' no encontrado en la lista.");
+        alert("Material 'PATIN C' genérico no encontrado en la lista.");
         return;
     }
 
@@ -765,8 +766,8 @@ function addPalletPatines() {
         description: material.description,
         nameEs: material.nameEs,
         units: 60,
-        netWeightUnit: material.netWeight,
-        totalWeight: material.netWeight * 60,
+        netWeightUnit: material.netWeight || fallbackWeight,
+        totalWeight: (material.netWeight || fallbackWeight) * 60,
         taric: material.taricNumber
     };
 
