@@ -201,6 +201,8 @@ function parseProductCatalog(csvText) {
     const nameIndex = headers.indexOf('Nombre');
     const typeIndex = headers.indexOf('Tipo');
     const weightIndex = headers.indexOf('Peso Kg');
+    const palletTypeIndex = headers.indexOf('Tipo pallet');
+    const palletDimensionsIndex = headers.indexOf('Medida pallet');
     const taricIndex = headers.indexOf('TARIC (HS)');
     const englishNameIndex = headers.indexOf('Nombre EN-US');
 
@@ -222,6 +224,8 @@ function parseProductCatalog(csvText) {
             nameEn: alias.description || warehouseAlias.description || name,
             reference,
             productType: type,
+            palletType: row[palletTypeIndex] || '',
+            palletDimensions: row[palletDimensionsIndex] || '',
             netWeight: parsedWeight,
             taricNumber: row[taricIndex] || '',
             nameEnFromFile: row[englishNameIndex] || ''
@@ -332,6 +336,9 @@ function warehouseMaterial(record) {
         description: material?.description || mapped.description || record.product,
         nameEs: mapped.displayName || (mapped.skateSize ? `Patines C talla ${mapped.skateSize}` : (material?.nameEs || record.product)),
         nameEn: material?.nameEn || material?.description || record.product,
+        productType: material?.productType || record.productType || '',
+        palletType: material?.palletType || record.palletType || '',
+        palletDimensions: material?.palletDimensions || record.palletDimensions || '',
         netWeightUnit: material?.netWeight || fallbackMaterial?.netWeight || 0,
         taric: material?.taricNumber || ''
     };
@@ -455,7 +462,8 @@ const warehouseServiceReferences = new Set([
 ]);
 
 function isWarehouseService(record) {
-    return warehouseServiceReferences.has(record.reference) ||
+    return record.productType === 'service' ||
+        warehouseServiceReferences.has(record.reference) ||
         /\b(?:montaje|desmontaje|alquiler|transporte|supervisi[oó]n|carga|descarga)\b/i.test(record.product);
 }
 
