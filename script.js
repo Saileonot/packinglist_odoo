@@ -353,14 +353,15 @@ function inferWarehouseBarrierType(productName = '') {
 }
 
 function warehouseItem(material, units) {
+    const netWeightUnit = Number(material.netWeightUnit ?? material.netWeight) || 0;
     return {
         id: `item-${Date.now()}-${Math.random().toString(36).slice(2, 9)}`,
         description: material.description,
         nameEs: material.nameEs,
         nameEn: material.nameEn,
         units,
-        netWeightUnit: material.netWeightUnit,
-        totalWeight: Number((material.netWeightUnit * units).toFixed(2)),
+        netWeightUnit,
+        totalWeight: Number((netWeightUnit * units).toFixed(2)),
         taric: material.taric
     };
 }
