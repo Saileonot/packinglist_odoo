@@ -353,7 +353,11 @@ function inferWarehouseBarrierType(productName = '') {
 }
 
 function warehouseItem(material, units) {
-    const netWeightUnit = Number(material.netWeightUnit ?? material.netWeight) || 0;
+    const catalogMaterial = material.reference
+        ? materiales.find(item => item.reference === material.reference)
+        : null;
+    const rawWeight = material.netWeightUnit || material.netWeight || catalogMaterial?.netWeight || 0;
+    const netWeightUnit = Number(String(rawWeight).replace(',', '.')) || 0;
     return {
         id: `item-${Date.now()}-${Math.random().toString(36).slice(2, 9)}`,
         description: material.description,
